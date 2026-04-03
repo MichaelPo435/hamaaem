@@ -6,6 +6,7 @@ export interface UserProfile {
   id: string
   createdAt: string
   name?: string
+  profileImage?: string
 
   goals: TrainingGoal[]
   experienceLevel: ExperienceLevel

@@ -1,10 +1,10 @@
 'use client'
+import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useUserStore } from '@/lib/store/userStore'
-import { usePlanStore } from '@/lib/store/planStore'
 import { useWorkoutStore } from '@/lib/store/workoutStore'
 import { PageHeader } from '@/components/layout/PageHeader'
-import { RefreshCw, Trash2 } from 'lucide-react'
+import { Trash2, Camera } from 'lucide-react'
 import Link from 'next/link'
 
 const GOAL_LABELS: Record<string, string> = {
@@ -24,8 +24,10 @@ const EQUIPMENT_LABELS: Record<string, string> = {
 export default function ProfilePage() {
   const router = useRouter()
   const user = useUserStore(s => s.user)
+  const updateUser = useUserStore(s => s.updateUser)
   const resetUser = useUserStore(s => s.resetUser)
   const history = useWorkoutStore(s => s.history)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   if (!user) {
     return (
@@ -45,7 +47,26 @@ export default function ProfilePage() {
     }
   }
 
+  function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => {
+      updateUser({ profileImage: reader.result as string })
+    }
+    reader.readAsDataURL(file)
+  }
+
   const completed = history.filter(w => w.status === 'completed')
+
+  const thisWeekWorkouts = history.filter(w => {
+    const d = new Date(w.completedAt || w.startedAt || '')
+    const now = new Date()
+    const weekStart = new Date(now)
+    weekStart.setDate(now.getDate() - now.getDay())
+    weekStart.setHours(0, 0, 0, 0)
+    return d >= weekStart && w.status === 'completed'
+  })
 
   return (
     <div>
@@ -54,24 +75,62 @@ export default function ProfilePage() {
       <div className="px-4 space-y-4">
         {/* User card */}
         <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-5 text-white">
-          <div className="text-4xl mb-2">💪</div>
-          <div className="text-xl font-bold">{user.name || 'מתאמן'}</div>
-          <div className="text-sm opacity-80 mt-1">{LEVEL_LABELS[user.experienceLevel]}</div>
-          <div className="flex gap-4 mt-4 pt-4 border-t border-white/20">
+          {/* Avatar + name row */}
+          <div className="flex items-center gap-4 mb-4">
+            {/* Profile image */}
+            <div className="relative flex-shrink-0">
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="w-16 h-16 rounded-full overflow-hidden bg-orange-400/50 flex items-center justify-center"
+              >
+                {user.profileImage ? (
+                  <img src={user.profileImage} alt="פרופיל" className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-3xl">💪</span>
+                )}
+              </button>
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="absolute bottom-0 left-0 w-5 h-5 bg-white rounded-full flex items-center justify-center shadow"
+              >
+                <Camera size={11} className="text-orange-500" />
+              </button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handleImageChange}
+              />
+            </div>
+
+            {/* Name + level */}
             <div>
-              <div className="text-xl font-bold">{completed.length}</div>
-              <div className="text-xs opacity-70">אימונים</div>
+              <div className="text-2xl font-bold leading-tight">{user.name || 'מתאמן'}</div>
+              <div className="text-sm opacity-80 mt-0.5">{LEVEL_LABELS[user.experienceLevel]}</div>
+            </div>
+          </div>
+
+          {/* Stats row */}
+          <div className="flex gap-5 pt-4 border-t border-white/20">
+            <div>
+              <div className="text-2xl font-bold">{thisWeekWorkouts.length}</div>
+              <div className="text-xs opacity-70">אימונים השבוע</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold">{completed.length}</div>
+              <div className="text-xs opacity-70">סה״כ אימונים</div>
             </div>
             {user.age && (
               <div>
-                <div className="text-xl font-bold">{user.age}</div>
+                <div className="text-2xl font-bold">{user.age}</div>
                 <div className="text-xs opacity-70">גיל</div>
               </div>
             )}
             {user.weightKg && (
               <div>
-                <div className="text-xl font-bold">{user.weightKg}</div>
-                <div className="text-xs opacity-70">ק"ג</div>
+                <div className="text-2xl font-bold">{user.weightKg}</div>
+                <div className="text-xs opacity-70">ק״ג</div>
               </div>
             )}
           </div>
@@ -131,14 +190,7 @@ export default function ProfilePage() {
         )}
 
         {/* Actions */}
-        <div className="space-y-3 pb-4">
-          <Link
-            href="/plan/create"
-            className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl border-2 border-orange-500 text-orange-500 font-bold"
-          >
-            <RefreshCw size={18} />
-            בנה תוכנית חדשה
-          </Link>
+        <div className="pb-4">
           <button
             onClick={handleReset}
             className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl border-2 border-red-900 text-red-400 font-medium text-sm"
