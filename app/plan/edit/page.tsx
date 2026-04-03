@@ -48,7 +48,7 @@ function planToSessions(plan: TrainingPlan): AllSessions {
             nameHe: e.nameHe,
             sets: e.sets ?? 3,
             reps: e.reps ?? '8-10',
-            weight: (e as ExerciseEntry & { weight?: string }).weight ?? '',
+            weight: (e as unknown as { weight?: string }).weight ?? '',
           }))
         )
         result[weekIdx][day.dayOfWeek] = {
