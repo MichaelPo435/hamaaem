@@ -129,7 +129,7 @@ export default function RoutinePage({ params }: { params: Promise<{ routineId: s
             className="w-full bg-purple-500 text-white py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2"
           >
             <Play size={20} fill="white" />
-            התחל שגרה
+            התחל
           </button>
         </div>
       </div>
