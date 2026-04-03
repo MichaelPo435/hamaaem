@@ -32,7 +32,7 @@ export function buildPlanPrompt(user: UserProfile): string {
   const level = LEVEL_LABELS[user.experienceLevel] || user.experienceLevel
   const equipment = user.equipment.map(e => EQUIPMENT_LABELS[e] || e).join(', ')
 
-  return `צור תוכנית אימון ל-8 שבועות עבור המשתמש הבא:
+  return `צור תוכנית אימון ל-4 שבועות עבור המשתמש הבא:
 
 מטרות: ${goals}
 רמת ניסיון: ${level}
@@ -44,6 +44,7 @@ ${user.age ? `גיל: ${user.age}` : ''}
 ${user.weightKg ? `משקל: ${user.weightKg} ק"ג` : ''}
 
 חשוב:
+- כלול רק ימי אימון במערך days (אל תכלול ימי מנוחה עם isRestDay:true)
 - התרגילים חייבים להיות מתאימים לציוד הזמין
 - שמות תרגילים בשדה exerciseSlug: השתמש ב-slug האנגלי (squat, deadlift, bench-press, push-up, pull-up, lunge, plank, burpee, kettlebell-swing, thruster, box-jump, wall-ball, jump-rope, easy-run, tempo-run, interval-run, long-run, hill-run, rowing-machine, assault-bike, swimming-freestyle, etc.)
 - בכל תרגיל כלול nameHe בעברית
@@ -55,7 +56,7 @@ ${user.weightKg ? `משקל: ${user.weightKg} ק"ג` : ''}
   "title": "כותרת תוכנית בעברית",
   "description": "תיאור קצר בעברית",
   "type": "${user.goals[0]}",
-  "durationWeeks": 8,
+  "durationWeeks": 4,
   "weeks": [
     {
       "weekNumber": 1,
