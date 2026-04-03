@@ -75,7 +75,7 @@ export default async function ExercisePage({ params }: { params: Promise<{ slug:
           <h3 className="text-sm font-bold text-gray-300 mb-2">שרירים עובדים</h3>
           <div className="flex flex-wrap gap-2">
             {exercise.muscleGroups.primary.map(m => (
-              <span key={m} className="text-sm px-3 py-1 rounded-full bg-orange-900/40 text-orange-300 font-medium">
+              <span key={m} className="text-sm px-3 py-1 rounded-full bg-teal-900/40 text-teal-300 font-medium">
                 🔥 {MUSCLE_LABELS[m] || m}
               </span>
             ))}
@@ -93,7 +93,7 @@ export default async function ExercisePage({ params }: { params: Promise<{ slug:
           <ol className="space-y-3">
             {exercise.instructions.map((step, i) => (
               <li key={i} className="flex gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <span className="flex-shrink-0 w-7 h-7 bg-teal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {i + 1}
                 </span>
                 <p className="text-sm text-gray-300 leading-relaxed pt-0.5">{step}</p>

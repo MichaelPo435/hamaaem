@@ -62,7 +62,7 @@ export default function LibraryPage() {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="חפש תרגיל..."
-            className="w-full pr-9 pl-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-orange-500 text-sm placeholder:text-gray-500"
+            className="w-full pr-9 pl-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 text-sm placeholder:text-gray-500"
           />
         </div>
 
@@ -74,7 +74,7 @@ export default function LibraryPage() {
               onClick={() => setCategory(c.id)}
               className={`flex-shrink-0 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
                 category === c.id
-                  ? 'bg-orange-500 text-white'
+                  ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-300'
               }`}
             >

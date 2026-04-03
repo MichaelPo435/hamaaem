@@ -103,7 +103,7 @@ export default function WorkoutSessionPage({ params }: { params: Promise<{ sessi
       <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <div className="text-3xl mb-4">🔍</div>
         <p className="text-gray-400 mb-4">אימון לא נמצא</p>
-        <Link href="/plan" className="text-orange-500 font-medium">חזור לתוכנית</Link>
+        <Link href="/plan" className="text-teal-500 font-medium">חזור לתוכנית</Link>
       </div>
     )
   }
@@ -146,7 +146,7 @@ export default function WorkoutSessionPage({ params }: { params: Promise<{ sessi
             onClick={() => setRestTimer(null)}
           >
             <div className="bg-gray-800 rounded-3xl p-8 text-center mx-4">
-              <div className="text-5xl font-bold text-orange-500 mb-2">{restTimer}</div>
+              <div className="text-5xl font-bold text-teal-500 mb-2">{restTimer}</div>
               <div className="text-gray-300 mb-4">שניות מנוחה</div>
               <button
                 className="text-sm text-gray-500 underline"
@@ -232,7 +232,7 @@ function ExerciseRow({ exercise, onUpdateSet, onComplete }: ExerciseRowProps) {
   return (
     <div className={`${exercise.completed ? 'opacity-60' : ''}`}>
       <div className="flex items-center justify-between mb-2">
-        <Link href={`/library/${exercise.exerciseSlug}`} className="font-semibold text-white text-sm hover:text-orange-400">
+        <Link href={`/library/${exercise.exerciseSlug}`} className="font-semibold text-white text-sm hover:text-teal-400">
           {exercise.nameHe}
         </Link>
         {!exercise.completed && (

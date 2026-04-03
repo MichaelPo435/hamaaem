@@ -33,8 +33,8 @@ export default function HistoryPage() {
       <div className="px-4 space-y-4">
         {/* Stats */}
         <div className="grid grid-cols-3 gap-3">
-          <div className="bg-orange-950/30 rounded-2xl p-3 text-center">
-            <div className="text-xl font-bold text-orange-500">{completed.length}</div>
+          <div className="bg-teal-950/30 rounded-2xl p-3 text-center">
+            <div className="text-xl font-bold text-teal-500">{completed.length}</div>
             <div className="text-xs text-gray-400 mt-0.5">אימונים</div>
           </div>
           <div className="bg-blue-950/30 rounded-2xl p-3 text-center">
@@ -88,7 +88,7 @@ export default function HistoryPage() {
                       </div>
                       <div className={`w-2 h-2 rounded-full mt-1.5 ${
                         w.status === 'completed' ? 'bg-green-400' :
-                        w.status === 'skipped' ? 'bg-gray-600' : 'bg-orange-400'
+                        w.status === 'skipped' ? 'bg-gray-600' : 'bg-teal-400'
                       }`} />
                     </div>
                     {w.status === 'completed' && (
@@ -140,7 +140,7 @@ function WeeklyChart({ history }: { history: Array<{ completedAt?: string; start
       {data.map((d, i) => (
         <div key={i} className="flex-1 flex flex-col items-center gap-1">
           <div
-            className="w-full bg-orange-500 rounded-t"
+            className="w-full bg-teal-500 rounded-t"
             style={{ height: `${(d.count / max) * 48}px`, minHeight: d.count > 0 ? '4px' : '2px', opacity: d.count > 0 ? 1 : 0.2 }}
           />
           <span className="text-xs text-gray-500 truncate w-full text-center">{d.label}</span>

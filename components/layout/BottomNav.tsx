@@ -22,7 +22,7 @@ export function BottomNav() {
       {activeSession && (
         <Link
           href={`/workout/${activeSession.id}`}
-          className="block bg-orange-500 text-white text-center py-2 text-sm font-medium"
+          className="block bg-teal-500 text-white text-center py-2 text-sm font-medium"
         >
           אימון פעיל: {activeSession.title} ← המשך
         </Link>
@@ -36,7 +36,7 @@ export function BottomNav() {
               href={href}
               className={cn(
                 'flex flex-col items-center gap-1 px-3 py-2 rounded-xl transition-colors',
-                active ? 'text-orange-500' : 'text-gray-500'
+                active ? 'text-teal-500' : 'text-gray-500'
               )}
             >
               <Icon size={22} strokeWidth={active ? 2.5 : 1.8} />

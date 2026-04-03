@@ -129,7 +129,7 @@ export default function OnboardingPage() {
             onClick={() => toggleGoal(g.id)}
             className={`p-4 rounded-2xl border-2 text-right transition-all ${
               data.goals.includes(g.id)
-                ? 'border-orange-500 bg-orange-950/30'
+                ? 'border-teal-500 bg-teal-950/30'
                 : 'border-gray-700 bg-gray-800'
             }`}
           >
@@ -152,7 +152,7 @@ export default function OnboardingPage() {
             onClick={() => setData(d => ({ ...d, experienceLevel: l.id }))}
             className={`w-full p-4 rounded-2xl border-2 text-right flex items-center gap-4 transition-all ${
               data.experienceLevel === l.id
-                ? 'border-orange-500 bg-orange-950/30'
+                ? 'border-teal-500 bg-teal-950/30'
                 : 'border-gray-700 bg-gray-800'
             }`}
           >
@@ -172,7 +172,7 @@ export default function OnboardingPage() {
       <p className="text-gray-400 text-sm mb-6">ימים ומשך כל אימון</p>
       <div className="mb-6">
         <label className="block text-sm font-medium text-gray-300 mb-3">
-          ימי אימון בשבוע: <span className="text-orange-500 font-bold">{data.weeklyAvailability}</span>
+          ימי אימון בשבוע: <span className="text-teal-500 font-bold">{data.weeklyAvailability}</span>
         </label>
         <div className="flex gap-2 flex-wrap">
           {DAYS.map(d => (
@@ -181,7 +181,7 @@ export default function OnboardingPage() {
               onClick={() => setData(prev => ({ ...prev, weeklyAvailability: d }))}
               className={`w-12 h-12 rounded-xl font-bold text-lg transition-all ${
                 data.weeklyAvailability === d
-                  ? 'bg-orange-500 text-white'
+                  ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-300'
               }`}
             >
@@ -192,7 +192,7 @@ export default function OnboardingPage() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-3">
-          משך אימון: <span className="text-orange-500 font-bold">{data.sessionDuration} דקות</span>
+          משך אימון: <span className="text-teal-500 font-bold">{data.sessionDuration} דקות</span>
         </label>
         <div className="flex gap-2">
           {DURATIONS.map(d => (
@@ -201,7 +201,7 @@ export default function OnboardingPage() {
               onClick={() => setData(prev => ({ ...prev, sessionDuration: d as 30 | 45 | 60 | 90 }))}
               className={`flex-1 py-3 rounded-xl font-semibold text-sm transition-all ${
                 data.sessionDuration === d
-                  ? 'bg-orange-500 text-white'
+                  ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-300'
               }`}
             >
@@ -223,7 +223,7 @@ export default function OnboardingPage() {
             onClick={() => toggleEquipment(e.id)}
             className={`p-3 rounded-2xl border-2 text-right flex items-center gap-2 transition-all ${
               data.equipment.includes(e.id)
-                ? 'border-orange-500 bg-orange-950/30'
+                ? 'border-teal-500 bg-teal-950/30'
                 : 'border-gray-700 bg-gray-800'
             }`}
           >
@@ -245,7 +245,7 @@ export default function OnboardingPage() {
             onClick={() => toggleInjury(inj)}
             className={`px-4 py-2 rounded-full border-2 text-sm font-medium transition-all ${
               data.injuries.includes(inj)
-                ? 'border-orange-500 bg-orange-500 text-white'
+                ? 'border-teal-500 bg-teal-500 text-white'
                 : 'border-gray-700 bg-gray-800 text-gray-300'
             }`}
           >
@@ -268,7 +268,7 @@ export default function OnboardingPage() {
             value={data.name}
             onChange={e => setData(d => ({ ...d, name: e.target.value }))}
             placeholder="כיצד לקרוא לך?"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-orange-500 placeholder:text-gray-500"
+            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
           />
         </div>
         <div>
@@ -278,7 +278,7 @@ export default function OnboardingPage() {
             value={data.age}
             onChange={e => setData(d => ({ ...d, age: e.target.value }))}
             placeholder="גיל"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-orange-500 placeholder:text-gray-500"
+            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
           />
         </div>
         <div>
@@ -288,7 +288,7 @@ export default function OnboardingPage() {
             value={data.weightKg}
             onChange={e => setData(d => ({ ...d, weightKg: e.target.value }))}
             placeholder="משקל"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-orange-500 placeholder:text-gray-500"
+            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
           />
         </div>
       </div>
@@ -301,12 +301,12 @@ export default function OnboardingPage() {
       <div className="px-4 pt-8 pb-4">
         <div className="flex items-center justify-between mb-4">
           <span className="text-sm text-gray-500">שלב {step + 1} מתוך {totalSteps}</span>
-          <span className="text-2xl font-bold text-orange-500">💪 המאמן</span>
+          <span className="text-2xl font-bold text-teal-500">💪 המאמן</span>
         </div>
         {/* Progress bar */}
         <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-orange-500 rounded-full"
+            className="h-full bg-teal-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -334,7 +334,7 @@ export default function OnboardingPage() {
         <button
           onClick={() => step === totalSteps - 1 ? handleComplete() : setStep(s => s + 1)}
           disabled={!canProceed()}
-          className="w-full py-4 rounded-2xl bg-orange-500 text-white font-bold text-lg disabled:opacity-40 disabled:cursor-not-allowed transition-all active:scale-95"
+          className="w-full py-4 rounded-2xl bg-teal-500 text-white font-bold text-lg disabled:opacity-40 disabled:cursor-not-allowed transition-all active:scale-95"
         >
           {step === totalSteps - 1 ? '🚀 צור תוכנית אימון!' : 'המשך'}
         </button>

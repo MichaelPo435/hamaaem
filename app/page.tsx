@@ -18,7 +18,7 @@ export default function RootPage() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center">
-        <div className="text-4xl font-bold text-orange-500 mb-2">💪</div>
+        <div className="text-4xl font-bold text-teal-500 mb-2">💪</div>
         <p className="text-gray-500">טוען...</p>
       </div>
     </div>

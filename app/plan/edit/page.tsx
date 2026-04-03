@@ -209,7 +209,7 @@ export default function EditPlanPage() {
                   onClick={() => toggleDay(dow)}
                   className={`py-3 rounded-xl text-xs font-medium transition-all ${
                     selectedDays.includes(dow)
-                      ? 'bg-orange-500 text-white'
+                      ? 'bg-teal-500 text-white'
                       : 'bg-gray-800 text-gray-400'
                   }`}
                 >
@@ -223,7 +223,7 @@ export default function EditPlanPage() {
           <button
             onClick={() => { setActiveWeekIdx(0); setActiveDayIdx(0); setStep(2) }}
             disabled={selectedDays.length === 0 || !planName.trim()}
-            className="w-full py-4 bg-orange-500 text-white rounded-2xl font-bold text-base disabled:opacity-40"
+            className="w-full py-4 bg-teal-500 text-white rounded-2xl font-bold text-base disabled:opacity-40"
           >
             ערוך תרגילים ←
           </button>
@@ -244,7 +244,7 @@ export default function EditPlanPage() {
               onClick={() => { setActiveWeekIdx(i); setActiveDayIdx(0); setSearch('') }}
               className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 activeWeekIdx === i
-                  ? 'bg-orange-500 text-white'
+                  ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-400'
               }`}
             >
@@ -274,7 +274,7 @@ export default function EditPlanPage() {
           {activeDayIdx < selectedDays.length - 1 ? (
             <button
               onClick={() => { setActiveDayIdx(i => i + 1); setSearch('') }}
-              className="text-orange-400 text-sm font-medium px-2 py-1"
+              className="text-teal-400 text-sm font-medium px-2 py-1"
             >
               {DAY_NAMES[selectedDays[activeDayIdx + 1]]} ←
             </button>
@@ -377,7 +377,7 @@ export default function EditPlanPage() {
                   </div>
                   {added
                     ? <Check size={16} className="text-green-400 flex-shrink-0 mr-2" />
-                    : <Plus size={16} className="text-orange-400 flex-shrink-0 mr-2" />
+                    : <Plus size={16} className="text-teal-400 flex-shrink-0 mr-2" />
                   }
                 </button>
               )

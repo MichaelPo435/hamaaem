@@ -30,7 +30,7 @@ export default function PlanPage() {
         <p className="text-gray-400 text-sm mb-6">בנה תוכנית אימון משלך עם התרגילים שאתה בוחר</p>
         <Link
           href="/plan/create"
-          className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-2xl font-bold"
+          className="inline-flex items-center gap-2 bg-teal-500 text-white px-6 py-3 rounded-2xl font-bold"
         >
           <Plus size={18} />
           בנה תוכנית חדשה
@@ -52,8 +52,8 @@ export default function PlanPage() {
             <Link href="/plan/edit" className="p-2 rounded-xl bg-gray-800">
               <Pencil size={18} className="text-gray-400" />
             </Link>
-            <Link href="/plan/create" className="p-2 rounded-xl bg-orange-950/40">
-              <Plus size={18} className="text-orange-500" />
+            <Link href="/plan/create" className="p-2 rounded-xl bg-teal-950/40">
+              <Plus size={18} className="text-teal-500" />
             </Link>
           </div>
         }
@@ -70,7 +70,7 @@ export default function PlanPage() {
                 onClick={() => { setSelectedWeek(i); setSelectedDay(null) }}
                 className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
                   selectedWeek === i
-                    ? 'bg-orange-500 text-white'
+                    ? 'bg-teal-500 text-white'
                     : 'bg-gray-800 text-gray-300'
                 }`}
               >
@@ -79,7 +79,7 @@ export default function PlanPage() {
             ))}
           </div>
           {week?.theme && (
-            <p className="text-sm text-orange-500 font-medium mt-2">{week.theme}</p>
+            <p className="text-sm text-teal-500 font-medium mt-2">{week.theme}</p>
           )}
         </div>
 
@@ -100,9 +100,9 @@ export default function PlanPage() {
                     onClick={() => setSelectedDay(isSelected ? null : i)}
                     className={`flex flex-col items-center py-2 px-1 rounded-xl transition-all ${
                       isSelected
-                        ? 'bg-orange-500 text-white'
+                        ? 'bg-teal-500 text-white'
                         : today
-                        ? 'bg-gray-800 border-2 border-orange-500'
+                        ? 'bg-gray-800 border-2 border-teal-500'
                         : 'bg-gray-800'
                     }`}
                   >
@@ -127,7 +127,7 @@ export default function PlanPage() {
               </div>
               <Link
                 href={`/workout/${selectedDayData.session.id}`}
-                className="flex items-center gap-1 bg-orange-500 text-white px-4 py-2 rounded-xl text-sm font-bold"
+                className="flex items-center gap-1 bg-teal-500 text-white px-4 py-2 rounded-xl text-sm font-bold"
               >
                 <Play size={14} fill="currentColor" />
                 התחל
@@ -143,7 +143,7 @@ export default function PlanPage() {
                     <div key={i} className="flex items-center justify-between py-1.5 px-3 bg-gray-700 rounded-lg">
                       <Link
                         href={`/library/${ex.exerciseSlug}`}
-                        className="font-medium text-sm text-gray-200 flex items-center gap-1 hover:text-orange-400"
+                        className="font-medium text-sm text-gray-200 flex items-center gap-1 hover:text-teal-400"
                       >
                         {ex.nameHe}
                         <ChevronLeft size={12} className="text-gray-600" />
@@ -170,7 +170,7 @@ export default function PlanPage() {
         )}
 
         {/* Plan description */}
-        <div className="bg-orange-950/20 rounded-2xl p-4">
+        <div className="bg-teal-950/20 rounded-2xl p-4">
           <p className="text-sm text-gray-300">{activePlan.description}</p>
         </div>
       </div>

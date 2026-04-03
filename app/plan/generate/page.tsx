@@ -80,7 +80,7 @@ export default function GeneratePlanPage() {
         <div className="space-y-3 w-full max-w-xs">
           <button
             onClick={() => { setError(''); window.location.reload() }}
-            className="w-full py-3 rounded-2xl bg-orange-500 text-white font-bold"
+            className="w-full py-3 rounded-2xl bg-teal-500 text-white font-bold"
           >
             נסה שוב
           </button>
@@ -111,7 +111,7 @@ export default function GeneratePlanPage() {
       {/* Animated circles */}
       <div className="relative mb-10">
         <motion.div
-          className="w-32 h-32 rounded-full bg-orange-950/50"
+          className="w-32 h-32 rounded-full bg-teal-950/50"
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ repeat: Infinity, duration: 2 }}
         />
@@ -140,7 +140,7 @@ export default function GeneratePlanPage() {
         {MESSAGES.map((_, i) => (
           <motion.div
             key={i}
-            className={`h-2 rounded-full ${i === messageIdx ? 'bg-orange-500 w-6' : 'bg-gray-700 w-2'}`}
+            className={`h-2 rounded-full ${i === messageIdx ? 'bg-teal-500 w-6' : 'bg-gray-700 w-2'}`}
             transition={{ duration: 0.3 }}
           />
         ))}

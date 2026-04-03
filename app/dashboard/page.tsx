@@ -63,7 +63,7 @@ export default function DashboardPage() {
         {/* Today's workout */}
         <div className="rounded-2xl overflow-hidden">
           {todaySession ? (
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-5 text-white">
+            <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-5 text-white">
               <div className="text-sm font-medium opacity-80 mb-1">האימון של היום</div>
               <div className="text-xl font-bold mb-1">{todaySession.title}</div>
               <div className="text-sm opacity-80 mb-4">
@@ -72,7 +72,7 @@ export default function DashboardPage() {
               </div>
               <Link
                 href={`/workout/${todaySession.id}`}
-                className="inline-flex items-center gap-2 bg-white text-orange-500 px-5 py-2.5 rounded-xl font-bold text-sm"
+                className="inline-flex items-center gap-2 bg-white text-teal-500 px-5 py-2.5 rounded-xl font-bold text-sm"
               >
                 <Play size={16} fill="currentColor" />
                 התחל אימון
@@ -84,13 +84,13 @@ export default function DashboardPage() {
               <p className="text-gray-200 text-base font-medium leading-relaxed text-right">{motivationalQuote}</p>
             </div>
           ) : (
-            <div className="bg-orange-950/30 border-2 border-dashed border-orange-800 rounded-2xl p-6 text-center">
+            <div className="bg-teal-950/30 border-2 border-dashed border-teal-800 rounded-2xl p-6 text-center">
               <div className="text-3xl mb-2">📋</div>
               <div className="font-semibold text-gray-200 mb-1">אין תוכנית אימון פעילה</div>
               <div className="text-sm text-gray-400 mb-4">בנה תוכנית אישית עם התרגילים שלך</div>
               <Link
                 href="/plan/create"
-                className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+                className="inline-flex items-center gap-2 bg-teal-500 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
               >
                 <Plus size={16} />
                 בנה תוכנית
@@ -102,11 +102,11 @@ export default function DashboardPage() {
         {/* This week stats */}
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-gray-800 rounded-2xl p-4">
-            <div className="text-2xl font-bold text-orange-500">{thisWeekWorkouts.length}</div>
+            <div className="text-2xl font-bold text-teal-500">{thisWeekWorkouts.length}</div>
             <div className="text-sm text-gray-400">אימונים השבוע</div>
           </div>
           <div className="bg-gray-800 rounded-2xl p-4">
-            <div className="text-2xl font-bold text-orange-500">{history.length}</div>
+            <div className="text-2xl font-bold text-teal-500">{history.length}</div>
             <div className="text-sm text-gray-400">סה"כ אימונים</div>
           </div>
         </div>

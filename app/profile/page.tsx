@@ -34,7 +34,7 @@ export default function ProfilePage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <p className="text-gray-400 mb-4">לא נמצא פרופיל</p>
-          <Link href="/onboarding" className="text-orange-500 font-medium">התחל מחדש</Link>
+          <Link href="/onboarding" className="text-teal-500 font-medium">התחל מחדש</Link>
         </div>
       </div>
     )
@@ -74,14 +74,14 @@ export default function ProfilePage() {
 
       <div className="px-4 space-y-4">
         {/* User card */}
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-5 text-white">
+        <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-5 text-white">
           {/* Avatar + name row */}
           <div className="flex items-center gap-4 mb-4">
             {/* Profile image */}
             <div className="relative flex-shrink-0">
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-16 h-16 rounded-full overflow-hidden bg-orange-400/50 flex items-center justify-center"
+                className="w-16 h-16 rounded-full overflow-hidden bg-teal-400/50 flex items-center justify-center"
               >
                 {user.profileImage ? (
                   <img src={user.profileImage} alt="פרופיל" className="w-full h-full object-cover" />
@@ -93,7 +93,7 @@ export default function ProfilePage() {
                 onClick={() => fileInputRef.current?.click()}
                 className="absolute bottom-0 left-0 w-5 h-5 bg-white rounded-full flex items-center justify-center shadow"
               >
-                <Camera size={11} className="text-orange-500" />
+                <Camera size={11} className="text-teal-500" />
               </button>
               <input
                 ref={fileInputRef}
@@ -141,7 +141,7 @@ export default function ProfilePage() {
           <h3 className="font-bold text-white mb-3 text-sm">מטרות אימון</h3>
           <div className="flex flex-wrap gap-2">
             {user.goals.map(g => (
-              <span key={g} className="text-sm px-3 py-1 bg-orange-900/40 text-orange-300 rounded-full font-medium">
+              <span key={g} className="text-sm px-3 py-1 bg-teal-900/40 text-teal-300 rounded-full font-medium">
                 {GOAL_LABELS[g] || g}
               </span>
             ))}
