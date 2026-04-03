@@ -26,6 +26,7 @@ type ExerciseEntry = {
   nameHe: string
   sets: number
   reps: string
+  weight: string
 }
 
 type DaySession = {
@@ -74,7 +75,7 @@ export default function CreatePlanPage() {
   function addExercise(ex: Exercise) {
     if (session.exercises.find(e => e.slug === ex.slug)) return
     updateSession({
-      exercises: [...session.exercises, { slug: ex.slug, nameHe: ex.nameHe, sets: 3, reps: '8-10' }],
+      exercises: [...session.exercises, { slug: ex.slug, nameHe: ex.nameHe, sets: 3, reps: '8-10', weight: '' }],
     })
   }
 
@@ -82,7 +83,7 @@ export default function CreatePlanPage() {
     updateSession({ exercises: session.exercises.filter(e => e.slug !== slug) })
   }
 
-  function updateExercise(slug: string, field: 'sets' | 'reps', value: string | number) {
+  function updateExercise(slug: string, field: 'sets' | 'reps' | 'weight', value: string | number) {
     updateSession({
       exercises: session.exercises.map(e => e.slug === slug ? { ...e, [field]: value } : e),
     })
@@ -116,6 +117,7 @@ export default function CreatePlanPage() {
                 nameHe: e.nameHe,
                 sets: e.sets,
                 reps: e.reps,
+                weight: e.weight || undefined,
               })),
             }],
           },
@@ -271,6 +273,15 @@ export default function CreatePlanPage() {
                         onChange={e => updateExercise(ex.slug, 'reps', e.target.value)}
                         className="w-16 bg-gray-700 text-white text-xs rounded-lg px-2 py-1.5 text-center"
                         placeholder="8-10"
+                      />
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs text-gray-400">משקל:</span>
+                      <input
+                        value={ex.weight}
+                        onChange={e => updateExercise(ex.slug, 'weight', e.target.value)}
+                        className="w-16 bg-gray-700 text-white text-xs rounded-lg px-2 py-1.5 text-center"
+                        placeholder='ק"ג'
                       />
                     </div>
                   </div>
