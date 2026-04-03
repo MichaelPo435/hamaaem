@@ -47,11 +47,11 @@ export async function POST(req: NextRequest) {
       theme: ['שבוע בסיס', 'שבוע עצימות', 'שבוע עומס', 'שבוע שיא'][weekIdx],
       days: DAY_SLOTS.map(dow => {
         const sessionIdx = trainingDaySlots.indexOf(dow)
-        if (sessionIdx === -1) return { dayOfWeek: dow, isRestDay: true }
+        if (sessionIdx === -1) return { dayOfWeek: dow as 0|1|2|3|4|5|6, isRestDay: true }
         const dayTemplate = planData.days?.[sessionIdx % (planData.days?.length || 1)]
-        if (!dayTemplate) return { dayOfWeek: dow, isRestDay: true }
+        if (!dayTemplate) return { dayOfWeek: dow as 0|1|2|3|4|5|6, isRestDay: true }
         return {
-          dayOfWeek: dow,
+          dayOfWeek: dow as 0|1|2|3|4|5|6,
           isRestDay: false,
           session: {
             id: `w${weekIdx + 1}-d${dow}`,
