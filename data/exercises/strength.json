@@ -1,0 +1,282 @@
+[
+  {
+    "id": "s1", "slug": "squat", "nameHe": "סקוואט", "nameEn": "Squat",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["hamstrings", "core"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד עם רגליים ברוחב כתפיים", "הורד את הגוף עד שירכיים מקבילות לרצפה", "דחוף דרך העקבים לחזור לעמידה", "שמור על גב ישר לאורך כל התנועה"],
+    "tips": ["הברכיים לא יוצאות החוצה מהבהונות", "מבט קדימה-מעלה"],
+    "videoYouTubeId": "aclHkVaku9U",
+    "tags": ["compound", "lower_body", "push"]
+  },
+  {
+    "id": "s2", "slug": "deadlift", "nameHe": "דדליפט", "nameEn": "Deadlift",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["hamstrings", "back", "glutes"], "secondary": ["core", "forearms"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד עם רגליים ברוחת ירך", "כופף את הברכיים ותפוס את המוט", "שמור על גב ישר ורם את המוט", "הישר את הגוף לחלוטין בחלק העליון"],
+    "tips": ["המוט צמוד לגוף לאורך כל התנועה", "הכניסי את ישבנך קדימה בעת ירידה"],
+    "videoYouTubeId": "op9kVnSso6Q",
+    "tags": ["compound", "lower_body", "pull", "posterior_chain"]
+  },
+  {
+    "id": "s3", "slug": "bench-press", "nameHe": "לחיצת חזה", "nameEn": "Bench Press",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["chest"], "secondary": ["shoulders", "triceps"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הספסל עם רגליים שטוחות על הרצפה", "תפוס את המוט ברוחב מעט יותר מכתפיים", "הורד את המוט לחזה", "דחוף את המוט כלפי מעלה"],
+    "tips": ["שמור על קשת טבעית בגב התחתון", "כפות הרגליים שטוחות"],
+    "videoYouTubeId": "SCVCLChPQEs",
+    "tags": ["compound", "upper_body", "push", "chest"]
+  },
+  {
+    "id": "s4", "slug": "overhead-press", "nameHe": "לחיצת כתפיים עמידה", "nameEn": "Overhead Press",
+    "category": "strength", "equipment": ["barbell", "dumbbells", "full_gym"],
+    "muscleGroups": { "primary": ["shoulders"], "secondary": ["triceps", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד עם המוט בגובה הכתפיים", "דחוף את המוט ישירות כלפי מעלה", "הישר את הזרועות לחלוטין", "חזור לנקודת ההתחלה"],
+    "tips": ["מהדק את הגלוטאוס ואת הקור", "אל תקמר את הגב"],
+    "videoYouTubeId": "2yjwXTZQDDI",
+    "tags": ["compound", "upper_body", "push", "shoulders"]
+  },
+  {
+    "id": "s5", "slug": "pull-up", "nameHe": "מתח", "nameEn": "Pull-Up",
+    "category": "strength", "equipment": ["pull_up_bar"],
+    "muscleGroups": { "primary": ["back", "biceps"], "secondary": ["shoulders", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["תלה על מוט עם אחיזה רחבה", "משוך את עצמך כלפי מעלה עד הסנטר מעל למוט", "הורד לאט חזרה", "הישר את הזרועות לחלוטין למטה"],
+    "tips": ["התנועה איטית ומבוקרת", "אל תתנדנד"],
+    "videoYouTubeId": "eGo4IYlbE5g",
+    "tags": ["compound", "upper_body", "pull", "back"]
+  },
+  {
+    "id": "s6", "slug": "barbell-row", "nameHe": "חתירה עם מוט", "nameEn": "Barbell Row",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["biceps", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["כופף קדימה בזווית 45 מעלות", "אחז את המוט בידיים ברוחת כתפיים", "משוך את המוט לבטן", "הורד לאט"],
+    "tips": ["הגב ישר לאורך כל התנועה", "מרפקים צמודים לגוף"],
+    "videoYouTubeId": "FWJR5Ve8bnQ",
+    "tags": ["compound", "upper_body", "pull", "back"]
+  },
+  {
+    "id": "s7", "slug": "dumbbell-curl", "nameHe": "כפיפת מרפק עם משקולות", "nameEn": "Dumbbell Curl",
+    "category": "strength", "equipment": ["dumbbells"],
+    "muscleGroups": { "primary": ["biceps"], "secondary": ["forearms"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד עם משקולת בכל יד", "כופף את המרפק ורם את המשקולת לכתף", "הורד לאט חזרה", "חזור לשתי הידיים לחילופין"],
+    "tips": ["אל תשתמש בתנופה", "שמור על מרפקים קרובים לגוף"],
+    "videoYouTubeId": "ykJmrZ5v0Oo",
+    "tags": ["isolation", "upper_body", "biceps"]
+  },
+  {
+    "id": "s8", "slug": "tricep-dip", "nameHe": "דיפ לטריצפס", "nameEn": "Tricep Dip",
+    "category": "strength", "equipment": ["pull_up_bar", "full_gym"],
+    "muscleGroups": { "primary": ["triceps"], "secondary": ["chest", "shoulders"] },
+    "difficulty": "intermediate",
+    "instructions": ["אחז את המקביל ותלה", "הורד את הגוף עד שמרפקים ב-90 מעלות", "דחוף לחזור לנקודת ההתחלה"],
+    "tips": ["הטה קלות קדימה לעבוד יותר על החזה", "ישר לעבוד יותר על הטריצפס"],
+    "videoYouTubeId": "2z8JmcrW-As",
+    "tags": ["compound", "upper_body", "push", "triceps"]
+  },
+  {
+    "id": "s9", "slug": "lunge", "nameHe": "לאנג׳", "nameEn": "Lunge",
+    "category": "strength", "equipment": ["none", "dumbbells", "barbell"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["hamstrings", "core"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד זקוף עם רגליים יחד", "צעד גדול קדימה עם רגל אחת", "הורד את הברך האחורית לכיוון הרצפה", "דחוף חזרה לעמידה"],
+    "tips": ["הברך הקדמית לא מעבר לבהון", "גוף ישר"],
+    "videoYouTubeId": "QOVaHwm-Q6U",
+    "tags": ["compound", "lower_body", "unilateral"]
+  },
+  {
+    "id": "s10", "slug": "romanian-deadlift", "nameHe": "דדליפט רומני", "nameEn": "Romanian Deadlift",
+    "category": "strength", "equipment": ["barbell", "dumbbells", "full_gym"],
+    "muscleGroups": { "primary": ["hamstrings", "glutes"], "secondary": ["back", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד עם המוט בידיים מול הירכיים", "הישאר עם רגליים ישרות כמעט", "הורד את המוט לאורך הרגליים", "הרגש מתח בהמסטרינג ועצור"],
+    "tips": ["גב ישר לאורך כל התנועה", "מתמקד בהמסטרינג"],
+    "videoYouTubeId": "JCXUYuzwNrM",
+    "tags": ["compound", "lower_body", "posterior_chain"]
+  },
+  {
+    "id": "s11", "slug": "hip-thrust", "nameHe": "היפ ת׳ראסט", "nameEn": "Hip Thrust",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["glutes"], "secondary": ["hamstrings", "core"] },
+    "difficulty": "beginner",
+    "instructions": ["שב עם גב על הספסל", "הנח את המוט על הירכיים", "דחוף את הירכיים כלפי מעלה", "מהדק את הגלוטאוס בחלק העליון"],
+    "tips": ["סנטר מוטה קלות כלפי מטה", "ברכיים ב-90 מעלות בחלק העליון"],
+    "videoYouTubeId": "LM8XHLYJoYs",
+    "tags": ["isolation", "lower_body", "glutes"]
+  },
+  {
+    "id": "s12", "slug": "plank", "nameHe": "פלאנק", "nameEn": "Plank",
+    "category": "strength", "equipment": ["none"],
+    "muscleGroups": { "primary": ["core"], "secondary": ["shoulders", "glutes"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הבטן", "תמוך על מרפקים ובהונות", "הרם את הגוף לקו ישר", "שמור על מיקום ללא תנועה"],
+    "tips": ["אל תרים את הישבן", "נשום בצורה סדירה"],
+    "videoYouTubeId": "ASdvN_XEl_c",
+    "tags": ["core", "isometric", "beginner"]
+  },
+  {
+    "id": "s13", "slug": "push-up", "nameHe": "שכיבות סמיכה", "nameEn": "Push-Up",
+    "category": "strength", "equipment": ["none"],
+    "muscleGroups": { "primary": ["chest", "triceps"], "secondary": ["shoulders", "core"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב עם ידיים ברוחת כתפיים", "הורד את הגוף לרצפה", "דחוף חזרה למעלה", "גוף בקו ישר לאורך כל התנועה"],
+    "tips": ["אל תשפיל את המותניים", "מרפקים לא פתוחים לגמרי"],
+    "videoYouTubeId": "IODxDxX7oi4",
+    "tags": ["compound", "upper_body", "bodyweight", "push"]
+  },
+  {
+    "id": "s14", "slug": "goblet-squat", "nameHe": "גובלט סקוואט", "nameEn": "Goblet Squat",
+    "category": "strength", "equipment": ["dumbbells", "kettlebells"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["core", "shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["אחז משקולת יד בשתי הידיים מול החזה", "שב עמוק תוך שמירה על גב ישר", "דחוף לחזור לעמידה"],
+    "tips": ["מרפקים דוחפים את הברכיים החוצה", "עקבים על הרצפה"],
+    "videoYouTubeId": "MeIiIdhvXT4",
+    "tags": ["compound", "lower_body", "beginner"]
+  },
+  {
+    "id": "s15", "slug": "lat-pulldown", "nameHe": "לט פולדאון", "nameEn": "Lat Pulldown",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["biceps"] },
+    "difficulty": "beginner",
+    "instructions": ["שב במכשיר ותפוס את הבר ברוחה גדולה", "משוך את הבר לחזה", "הדגש הורדת המרפקים", "חזור לאט"],
+    "tips": ["אל תסחוב בתנועה", "לחץ על כנפי השכם בחלק התחתון"],
+    "videoYouTubeId": "CAwf7n6Luuc",
+    "tags": ["compound", "upper_body", "pull", "back"]
+  },
+  {
+    "id": "s16", "slug": "cable-row", "nameHe": "חתירה בכבל", "nameEn": "Cable Row",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["biceps", "core"] },
+    "difficulty": "beginner",
+    "instructions": ["שב מול המכשיר עם ברכיים כפופות קלות", "שמור על גב ישר", "משוך את הידיות לבטן", "הורד לאט"],
+    "tips": ["אל תנוע לאחור-קדימה", "מרפקים צמודים"],
+    "videoYouTubeId": "GZbfZ033f74",
+    "tags": ["compound", "upper_body", "pull", "back"]
+  },
+  {
+    "id": "s17", "slug": "dumbbell-shoulder-press", "nameHe": "לחיצת כתפיים עם משקולות יד", "nameEn": "Dumbbell Shoulder Press",
+    "category": "strength", "equipment": ["dumbbells"],
+    "muscleGroups": { "primary": ["shoulders"], "secondary": ["triceps"] },
+    "difficulty": "beginner",
+    "instructions": ["שב על ספסל עם משקולת יד בכל יד", "הרם את המשקולות לגובה הכתפיים", "לחץ כלפי מעלה", "הורד לאט"],
+    "tips": ["אל תקמר את הגב", "נשמו בעת הורדה"],
+    "videoYouTubeId": "qEwKCR5JCog",
+    "tags": ["compound", "upper_body", "push", "shoulders"]
+  },
+  {
+    "id": "s18", "slug": "leg-press", "nameHe": "לג׳ פרס", "nameEn": "Leg Press",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["hamstrings"] },
+    "difficulty": "beginner",
+    "instructions": ["שב במכשיר עם רגליים על הפלטפורמה ברוחת כתפיים", "כופף ברכיים עד 90 מעלות", "דחוף חזרה", "אל תנעל לחלוטין את הברכיים"],
+    "tips": ["בהונות מעט מוסטות החוצה", "עקבים שטוחים"],
+    "videoYouTubeId": "IZxyjW7MPJQ",
+    "tags": ["compound", "lower_body", "machine"]
+  },
+  {
+    "id": "s19", "slug": "incline-bench-press", "nameHe": "לחיצת חזה עליון", "nameEn": "Incline Bench Press",
+    "category": "strength", "equipment": ["barbell", "full_gym"],
+    "muscleGroups": { "primary": ["chest"], "secondary": ["shoulders", "triceps"] },
+    "difficulty": "intermediate",
+    "instructions": ["שכב על ספסל משופע ב-30-45 מעלות", "תפוס את המוט", "הורד לחזה עליון", "דחוף למעלה"],
+    "tips": ["הספסל בזווית 30-45 מעלות", "שמור על מרפקים ב-45 מעלות"],
+    "videoYouTubeId": "SrqOu55lrYU",
+    "tags": ["compound", "upper_body", "push", "chest"]
+  },
+  {
+    "id": "s20", "slug": "face-pull", "nameHe": "פייס פול", "nameEn": "Face Pull",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["shoulders", "back"], "secondary": ["biceps"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד מול כבל גבוה", "תפוס את הידית בשתי הידיים", "משוך לפנים עם מרפקים גבוהים", "מתח את כתפי השכם"],
+    "tips": ["תנועה איטית ומבוקרת", "מרפקים בגובה האוזניים"],
+    "videoYouTubeId": "rep-qVOkqgk",
+    "tags": ["isolation", "upper_body", "pull", "shoulders"]
+  },
+  {
+    "id": "s21", "slug": "calf-raise", "nameHe": "הרמת עקבים", "nameEn": "Calf Raise",
+    "category": "strength", "equipment": ["none", "full_gym"],
+    "muscleGroups": { "primary": ["calves"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד עם קדמת כפות הרגליים על גבי מדרגה", "הרם את העקבים גבוה ככל האפשר", "הורד לאט מתחת לגובה המדרגה"],
+    "tips": ["תנועה מלאה לטווח מלא", "הרגש מתח בעגל"],
+    "videoYouTubeId": "gwLzBJYoWlI",
+    "tags": ["isolation", "lower_body", "calves"]
+  },
+  {
+    "id": "s22", "slug": "ab-crunch", "nameHe": "כפיפות בטן", "nameEn": "Crunch",
+    "category": "strength", "equipment": ["none"],
+    "muscleGroups": { "primary": ["core"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הגב עם ברכיים כפופות", "ידיים מאחורי הראש", "הרם את הכתפיים מהרצפה", "הורד לאט"],
+    "tips": ["אל תמשוך בצוואר", "סנטר רחוק מהחזה"],
+    "videoYouTubeId": "Xyd_fa5zoEU",
+    "tags": ["isolation", "core", "beginner"]
+  },
+  {
+    "id": "s23", "slug": "dumbbell-fly", "nameHe": "פרפר עם משקולות יד", "nameEn": "Dumbbell Fly",
+    "category": "strength", "equipment": ["dumbbells"],
+    "muscleGroups": { "primary": ["chest"], "secondary": ["shoulders"] },
+    "difficulty": "intermediate",
+    "instructions": ["שכב על ספסל עם משקולת יד בכל יד", "פתח את הזרועות לצדדים", "הבא את המשקולות יחד מעל החזה"],
+    "tips": ["קיפול קל במרפקים", "תנועה כמו חבוק עץ"],
+    "videoYouTubeId": "eozdVDA78K0",
+    "tags": ["isolation", "upper_body", "chest"]
+  },
+  {
+    "id": "s24", "slug": "tricep-pushdown", "nameHe": "לחיצה לטריצפס בכבל", "nameEn": "Tricep Pushdown",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["triceps"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד מול כבל גבוה", "תפוס את הבר", "לחץ כלפי מטה עם מרפקים קבועים לצד הגוף", "הורד לאט"],
+    "tips": ["מרפקים קבועים", "גוף ישר"],
+    "videoYouTubeId": "2-LAMcpzODU",
+    "tags": ["isolation", "upper_body", "triceps"]
+  },
+  {
+    "id": "s25", "slug": "bulgarian-split-squat", "nameHe": "בולגרי ספליט סקוואט", "nameEn": "Bulgarian Split Squat",
+    "category": "strength", "equipment": ["dumbbells", "barbell"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["hamstrings", "core"] },
+    "difficulty": "advanced",
+    "instructions": ["עמוד לפני ספסל עם גב לו", "הנח את רגל אחת על הספסל", "הורד את הגוף עד שירך קדמית מקבילה לרצפה", "דחוף חזרה למעלה"],
+    "tips": ["תנועה מבוקרת", "ברך קדמית לא מעבר לבהון"],
+    "videoYouTubeId": "2C-uNgKwPLE",
+    "tags": ["compound", "lower_body", "unilateral", "advanced"]
+  },
+  {
+    "id": "s26", "slug": "chest-supported-row", "nameHe": "חתירה נשענת חזה", "nameEn": "Chest Supported Row",
+    "category": "strength", "equipment": ["dumbbells", "full_gym"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["biceps", "shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב כשהחזה נשען על ספסל משופע", "תלוי משקולות בשתי הידיים", "משוך את המשקולות לצדי החזה", "הורד לאט"],
+    "tips": ["כנפי השכם מתכנסות בחלק העליון"],
+    "videoYouTubeId": "N3HkKSrN1Fc",
+    "tags": ["compound", "upper_body", "pull", "back"]
+  },
+  {
+    "id": "s27", "slug": "lateral-raise", "nameHe": "הרמה לצדדים", "nameEn": "Lateral Raise",
+    "category": "strength", "equipment": ["dumbbells"],
+    "muscleGroups": { "primary": ["shoulders"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד עם משקולת יד בכל יד", "הרם את הידיים לצדדים עד גובה הכתפיים", "הורד לאט"],
+    "tips": ["קיפול קל במרפקים", "אל תרים מעל הכתפיים"],
+    "videoYouTubeId": "3VcKaXpzqRo",
+    "tags": ["isolation", "upper_body", "shoulders"]
+  },
+  {
+    "id": "s28", "slug": "hyperextension", "nameHe": "היפר-אקסטנשן", "nameEn": "Hyperextension",
+    "category": "strength", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["back", "glutes"], "secondary": ["hamstrings"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב בכיפוף על מכשיר ההיפר", "הרם את הגוף עד לשורה ישרה", "הורד לאט"],
+    "tips": ["אל תשפיל מדי למטה", "תנועה מבוקרת"],
+    "videoYouTubeId": "ph3pddpKzzw",
+    "tags": ["compound", "lower_body", "posterior_chain"]
+  }
+]

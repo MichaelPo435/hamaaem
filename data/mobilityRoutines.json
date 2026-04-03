@@ -1,0 +1,146 @@
+[
+  {
+    "id": "r1", "slug": "morning-wake-up",
+    "titleHe": "התעוררות בוקר", "descriptionHe": "שגרה עדינה לפתיחת הגוף בבוקר",
+    "category": "mobility", "durationMinutes": 10, "difficulty": "beginner",
+    "targetAreas": ["back", "hip_flexors", "shoulders"],
+    "exercises": [
+      { "exerciseId": "m6", "nameHe": "חתול-פרה", "holdSeconds": 30, "sides": "both", "instruction": "עשה 10 חזרות" },
+      { "exerciseId": "m9", "nameHe": "כלב מסתכל למטה", "holdSeconds": 45, "sides": "both", "instruction": "החזק את הפוזה" },
+      { "exerciseId": "m8", "nameHe": "פוזת ילד", "holdSeconds": 60, "sides": "both", "instruction": "נח ונשום עמוק" },
+      { "exerciseId": "m13", "nameHe": "מעגלי ירכיים", "holdSeconds": 30, "sides": "both", "instruction": "10 מעגלים לכל כיוון" }
+    ],
+    "videoYouTubeId": "4pKly2JojMw"
+  },
+  {
+    "id": "r2", "slug": "post-workout-cooldown",
+    "titleHe": "קירור לאחר אימון", "descriptionHe": "מתיחות לאחר אימון כוח",
+    "category": "stretching", "durationMinutes": 15, "difficulty": "beginner",
+    "targetAreas": ["quads", "hamstrings", "chest", "back"],
+    "exercises": [
+      { "exerciseId": "m2", "nameHe": "מתיחת המסטרינג", "holdSeconds": 45, "sides": "single", "instruction": "30-45 שניות לכל רגל" },
+      { "exerciseId": "m1", "nameHe": "מתיחת היפ פלקסור", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל רגל" },
+      { "exerciseId": "m12", "nameHe": "פתיחת חזה", "holdSeconds": 30, "sides": "both", "instruction": "פתח את הכתפיים" },
+      { "exerciseId": "m11", "nameHe": "מתיחת כתף", "holdSeconds": 30, "sides": "single", "instruction": "30 שניות לכל כתף" }
+    ]
+  },
+  {
+    "id": "r3", "slug": "hip-opening",
+    "titleHe": "פתיחת ירכיים", "descriptionHe": "שגרה לשיפור מוביליטי הירכיים",
+    "category": "mobility", "durationMinutes": 20, "difficulty": "intermediate",
+    "targetAreas": ["hip_flexors", "glutes"],
+    "exercises": [
+      { "exerciseId": "m7", "nameHe": "המתיחה הגדולה בעולם", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל צד" },
+      { "exerciseId": "m3", "nameHe": "פוזת יונה", "holdSeconds": 90, "sides": "single", "instruction": "90 שניות לכל צד" },
+      { "exerciseId": "m18", "nameHe": "פוזת לטאה", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל צד" },
+      { "exerciseId": "m15", "nameHe": "מתיחת פיריפורמיס", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל צד" }
+    ]
+  },
+  {
+    "id": "r4", "slug": "runner-recovery",
+    "titleHe": "התאוששות רצים", "descriptionHe": "שגרת מתיחות ספציפית לרצים",
+    "category": "stretching", "durationMinutes": 15, "difficulty": "beginner",
+    "targetAreas": ["calves", "hamstrings", "hip_flexors"],
+    "exercises": [
+      { "exerciseId": "m2", "nameHe": "מתיחת המסטרינג", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל רגל" },
+      { "exerciseId": "m1", "nameHe": "מתיחת היפ פלקסור", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל רגל" },
+      { "exerciseId": "m5", "nameHe": "מוביליטי קרסול", "holdSeconds": 30, "sides": "single", "instruction": "15 חזרות לכל רגל" }
+    ]
+  },
+  {
+    "id": "r5", "slug": "full-body-yoga",
+    "titleHe": "יוגה לכל הגוף", "descriptionHe": "שגרת יוגה מאוזנת לכל רמות",
+    "category": "yoga", "durationMinutes": 25, "difficulty": "beginner",
+    "targetAreas": ["full_body"],
+    "exercises": [
+      { "exerciseId": "m9", "nameHe": "כלב מסתכל למטה", "holdSeconds": 60, "sides": "both", "instruction": "נשום 5 נשימות" },
+      { "exerciseId": "m14", "nameHe": "לוחם 1", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל צד" },
+      { "exerciseId": "m3", "nameHe": "פוזת יונה", "holdSeconds": 90, "sides": "single", "instruction": "90 שניות לכל צד" },
+      { "exerciseId": "m10", "nameHe": "כפיפה קדימה יושב", "holdSeconds": 60, "sides": "both", "instruction": "נשום עמוק" },
+      { "exerciseId": "m8", "nameHe": "פוזת ילד", "holdSeconds": 60, "sides": "both", "instruction": "סיים בנוחות" }
+    ]
+  },
+  {
+    "id": "r6", "slug": "squat-mobility",
+    "titleHe": "מוביליטי לסקוואט", "descriptionHe": "שיפור עומק וטכניקת הסקוואט",
+    "category": "mobility", "durationMinutes": 15, "difficulty": "intermediate",
+    "targetAreas": ["hip_flexors", "calves", "back"],
+    "exercises": [
+      { "exerciseId": "m5", "nameHe": "מוביליטי קרסול", "holdSeconds": 30, "sides": "single", "instruction": "15 חזרות לכל רגל" },
+      { "exerciseId": "m4", "nameHe": "סיבוב עמוד שדרה עליון", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל צד" },
+      { "exerciseId": "m13", "nameHe": "מעגלי ירכיים", "holdSeconds": 30, "sides": "both", "instruction": "מעגלים גדולים" },
+      { "exerciseId": "m1", "nameHe": "מתיחת היפ פלקסור", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל צד" }
+    ]
+  },
+  {
+    "id": "r7", "slug": "desk-worker-relief",
+    "titleHe": "הקלה לעובדי שולחן", "descriptionHe": "לפתיחת צוואר, כתפיים וגב לאחר ישיבה ממושכת",
+    "category": "stretching", "durationMinutes": 10, "difficulty": "beginner",
+    "targetAreas": ["neck", "shoulders", "back"],
+    "exercises": [
+      { "exerciseId": "m16", "nameHe": "מתיחת צוואר", "holdSeconds": 30, "sides": "single", "instruction": "30 שניות לכל צד" },
+      { "exerciseId": "m11", "nameHe": "מתיחת כתף", "holdSeconds": 30, "sides": "single", "instruction": "30 שניות לכל כתף" },
+      { "exerciseId": "m12", "nameHe": "פתיחת חזה", "holdSeconds": 45, "sides": "both", "instruction": "פתח ונשום" },
+      { "exerciseId": "m4", "nameHe": "סיבוב עמוד שדרה עליון", "holdSeconds": 30, "sides": "single", "instruction": "30 שניות לכל צד" }
+    ]
+  },
+  {
+    "id": "r8", "slug": "before-lifting",
+    "titleHe": "חימום לפני הרמת משקולות", "descriptionHe": "הכנת הגוף לאימון כוח",
+    "category": "mobility", "durationMinutes": 12, "difficulty": "beginner",
+    "targetAreas": ["full_body"],
+    "exercises": [
+      { "exerciseId": "m6", "nameHe": "חתול-פרה", "holdSeconds": 30, "sides": "both", "instruction": "10 חזרות" },
+      { "exerciseId": "m7", "nameHe": "המתיחה הגדולה בעולם", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל צד" },
+      { "exerciseId": "m13", "nameHe": "מעגלי ירכיים", "holdSeconds": 30, "sides": "both", "instruction": "10 לכל כיוון" },
+      { "exerciseId": "m4", "nameHe": "סיבוב עמוד שדרה עליון", "holdSeconds": 30, "sides": "single", "instruction": "10 לכל צד" }
+    ]
+  },
+  {
+    "id": "r9", "slug": "evening-wind-down",
+    "titleHe": "הרגעה בערב", "descriptionHe": "שגרת ערב להרגעה ושינה טובה יותר",
+    "category": "yoga", "durationMinutes": 20, "difficulty": "beginner",
+    "targetAreas": ["full_body"],
+    "exercises": [
+      { "exerciseId": "m8", "nameHe": "פוזת ילד", "holdSeconds": 90, "sides": "both", "instruction": "נשום עמוק 90 שניות" },
+      { "exerciseId": "m3", "nameHe": "פוזת יונה", "holdSeconds": 120, "sides": "single", "instruction": "2 דקות לכל צד" },
+      { "exerciseId": "m10", "nameHe": "כפיפה קדימה יושב", "holdSeconds": 90, "sides": "both", "instruction": "נשום עמוק" },
+      { "exerciseId": "m2", "nameHe": "מתיחת המסטרינג", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל רגל" }
+    ]
+  },
+  {
+    "id": "r10", "slug": "spine-health",
+    "titleHe": "בריאות עמוד השדרה", "descriptionHe": "שגרה לחיזוק וגמישות עמוד השדרה",
+    "category": "mobility", "durationMinutes": 15, "difficulty": "beginner",
+    "targetAreas": ["back"],
+    "exercises": [
+      { "exerciseId": "m6", "nameHe": "חתול-פרה", "holdSeconds": 60, "sides": "both", "instruction": "15 חזרות" },
+      { "exerciseId": "m4", "nameHe": "סיבוב עמוד שדרה עליון", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל צד" },
+      { "exerciseId": "m8", "nameHe": "פוזת ילד", "holdSeconds": 60, "sides": "both", "instruction": "60 שניות" },
+      { "exerciseId": "m9", "nameHe": "כלב מסתכל למטה", "holdSeconds": 60, "sides": "both", "instruction": "5 נשימות" }
+    ]
+  },
+  {
+    "id": "r11", "slug": "shoulder-health",
+    "titleHe": "בריאות כתפיים", "descriptionHe": "מוביליטי לכתפיים בריאות וחזקות",
+    "category": "mobility", "durationMinutes": 12, "difficulty": "beginner",
+    "targetAreas": ["shoulders", "chest"],
+    "exercises": [
+      { "exerciseId": "m11", "nameHe": "מתיחת כתף", "holdSeconds": 45, "sides": "single", "instruction": "45 שניות לכל כתף" },
+      { "exerciseId": "m12", "nameHe": "פתיחת חזה", "holdSeconds": 60, "sides": "both", "instruction": "60 שניות" },
+      { "exerciseId": "m16", "nameHe": "מתיחת צוואר", "holdSeconds": 30, "sides": "single", "instruction": "30 שניות לכל צד" }
+    ]
+  },
+  {
+    "id": "r12", "slug": "advanced-hip-mobility",
+    "titleHe": "מוביליטי ירכיים מתקדם", "descriptionHe": "לשיפור מקסימלי בטווח תנועה של הירכיים",
+    "category": "mobility", "durationMinutes": 25, "difficulty": "advanced",
+    "targetAreas": ["hip_flexors", "glutes", "hamstrings"],
+    "exercises": [
+      { "exerciseId": "m17", "nameHe": "מתיחת ספה", "holdSeconds": 120, "sides": "single", "instruction": "2 דקות לכל צד" },
+      { "exerciseId": "m18", "nameHe": "פוזת לטאה", "holdSeconds": 90, "sides": "single", "instruction": "90 שניות לכל צד" },
+      { "exerciseId": "m3", "nameHe": "פוזת יונה", "holdSeconds": 120, "sides": "single", "instruction": "2 דקות לכל צד" },
+      { "exerciseId": "m15", "nameHe": "מתיחת פיריפורמיס", "holdSeconds": 60, "sides": "single", "instruction": "60 שניות לכל צד" }
+    ]
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "m1", "slug": "hip-flexor-stretch", "nameHe": "מתיחת היפ פלקסור", "nameEn": "Hip Flexor Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors"], "secondary": ["quads"] },
+    "difficulty": "beginner",
+    "instructions": ["ברוך על ברך אחת בזווית 90 מעלות", "דחוף את הירכיים קדימה", "הרגש מתח בחזית הירך האחורית", "שמור 30-60 שניות"],
+    "tips": ["אל תקמר את הגב"],
+    "videoYouTubeId": "YqF3PBpbEME",
+    "tags": ["stretching", "hip", "beginner"]
+  },
+  {
+    "id": "m2", "slug": "hamstring-stretch", "nameHe": "מתיחת המסטרינג", "nameEn": "Hamstring Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hamstrings"], "secondary": ["back"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הגב", "הרם רגל אחת ישרה כלפי מעלה", "תפוס את השוק או הקרסול", "הרגש מתח בגב הירך"],
+    "tips": ["הרגל השנייה שטוחה על הרצפה"],
+    "videoYouTubeId": "g7Uhp5tphAs",
+    "tags": ["stretching", "lower_body", "beginner"]
+  },
+  {
+    "id": "m3", "slug": "pigeon-pose", "nameHe": "פוזת יונה", "nameEn": "Pigeon Pose",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["glutes", "hip_flexors"], "secondary": ["hamstrings"] },
+    "difficulty": "intermediate",
+    "instructions": ["מ-push up position", "הבא ברך אחת קדימה בין הידיים", "הנח את השוק על הרצפה", "הארך את הרגל האחורית", "נח קדימה"],
+    "tips": ["אל תסובב את האגן"],
+    "videoYouTubeId": "I9HxzVIjRHk",
+    "tags": ["yoga", "hip_opening", "flexibility"]
+  },
+  {
+    "id": "m4", "slug": "thoracic-rotation", "nameHe": "סיבוב עמוד שדרה עליון", "nameEn": "Thoracic Rotation",
+    "category": "mobility", "equipment": ["none"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["core"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הצד עם ברכיים כפופות 90 מעלות", "הנח יד על ברך עליונה", "סובב את הכתף העליונה לצד השני", "הרגש מתח בגב"],
+    "tips": ["ברכיים נשארות יחד"],
+    "videoYouTubeId": "3T2PzQ1fpVM",
+    "tags": ["mobility", "thoracic", "rotation"]
+  },
+  {
+    "id": "m5", "slug": "ankle-mobility", "nameHe": "מוביליטי קרסול", "nameEn": "Ankle Mobility",
+    "category": "mobility", "equipment": ["none"],
+    "muscleGroups": { "primary": ["calves"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["ברוך מול קיר", "הנח את הבהון הגדולה על הקיר", "דחוף את הברך לכיוון הקיר", "שמור ברך מעל בהון"],
+    "tips": ["חזור 10-15 פעמים לכל רגל"],
+    "videoYouTubeId": "b0c-HyqAhkM",
+    "tags": ["mobility", "ankle", "squat_prep"]
+  },
+  {
+    "id": "m6", "slug": "cat-cow", "nameHe": "חתול-פרה", "nameEn": "Cat-Cow",
+    "category": "mobility", "equipment": ["none"],
+    "muscleGroups": { "primary": ["back", "core"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["התחל על ארבע", "נשיפה: קמר את הגב למעלה כמו חתול", "שאיפה: הורד את הגב ורם את הראש כמו פרה", "חזור בצורה רציפה"],
+    "tips": ["תנועה רכה ומבוקרת"],
+    "videoYouTubeId": "kqnua4rHVVA",
+    "tags": ["mobility", "spine", "beginner"]
+  },
+  {
+    "id": "m7", "slug": "world-greatest-stretch", "nameHe": "המתיחה הגדולה בעולם", "nameEn": "World Greatest Stretch",
+    "category": "mobility", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors", "thoracic"], "secondary": ["hamstrings", "chest"] },
+    "difficulty": "intermediate",
+    "instructions": ["צעד קדימה לתנוחת lunge", "הנח יד שצדה כמו הרגל הקדמית על הרצפה", "סובב את כתף הצד הנגדי כלפי מעלה", "הישאר ואז שנה צד"],
+    "tips": ["עיין בסרטון לדיוק תנועה"],
+    "videoYouTubeId": "VG5oXR7iZ0E",
+    "tags": ["mobility", "full_body", "warm_up"]
+  },
+  {
+    "id": "m8", "slug": "child-pose", "nameHe": "פוזת ילד", "nameEn": "Child's Pose",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["back"], "secondary": ["hip_flexors", "shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["ברוך על ברכיים", "שב על עקבים", "הישאר קדימה עם ידיים מתוחות", "נח את המצח על הרצפה"],
+    "tips": ["נשם עמוק ותן לגוף להירגע"],
+    "videoYouTubeId": "2MJGg-dUKh0",
+    "tags": ["yoga", "recovery", "back"]
+  },
+  {
+    "id": "m9", "slug": "downward-dog", "nameHe": "כלב מסתכל למטה", "nameEn": "Downward Dog",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hamstrings", "calves", "back"], "secondary": ["shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["מתחיל על ארבע", "הרם את הישבן כלפי מעלה", "ישר את הרגליים ככל שאפשר", "דחוף ידיים לרצפה"],
+    "tips": ["שמור על גב ישר"],
+    "videoYouTubeId": "EC7RGJ975iM",
+    "tags": ["yoga", "full_body", "beginner"]
+  },
+  {
+    "id": "m10", "slug": "seated-forward-fold", "nameHe": "כפיפה קדימה יושב", "nameEn": "Seated Forward Fold",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hamstrings", "back"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["שב על הרצפה עם רגליים ישרות", "נשוף ונטה קדימה", "תפוס את השוקיים, קרסוליים או בהונות", "שמור על מיקום 30-60 שניות"],
+    "tips": ["גב ישר קודם לתנועה"],
+    "videoYouTubeId": "g7K1MuGDUQo",
+    "tags": ["yoga", "hamstrings", "recovery"]
+  },
+  {
+    "id": "m11", "slug": "shoulder-stretch", "nameHe": "מתיחת כתף", "nameEn": "Shoulder Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["shoulders"], "secondary": ["back"] },
+    "difficulty": "beginner",
+    "instructions": ["הבא יד אחת לפני החזה", "השתמש ביד השנייה למשוך לחזה", "הרגש מתח בכתף", "שמור 30 שניות"],
+    "tips": ["שמור על כתפיים מורדות"],
+    "videoYouTubeId": "JFAbKGDU3O4",
+    "tags": ["stretching", "shoulders", "beginner"]
+  },
+  {
+    "id": "m12", "slug": "chest-opener", "nameHe": "פתיחת חזה", "nameEn": "Chest Opener",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["chest", "shoulders"], "secondary": ["thoracic"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד זקוף", "שלב ידיים מאחורי הגב", "פתח את החזה ורם מבט למעלה", "הרגש פתיחה בחזה"],
+    "tips": ["פתח לאט ובנשימה"],
+    "videoYouTubeId": "kqnua4rHVVA",
+    "tags": ["yoga", "chest", "posture"]
+  },
+  {
+    "id": "m13", "slug": "hip-circle", "nameHe": "מעגלי ירכיים", "nameEn": "Hip Circle",
+    "category": "mobility", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors", "glutes"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד עם ידיים על ירכיים", "סובב את הירכיים במעגלים גדולים", "10 מעגלים לכל כיוון"],
+    "tips": ["מעגלים גדולים ככל האפשר"],
+    "videoYouTubeId": "3nW3xk8Cqpk",
+    "tags": ["mobility", "hip", "warm_up"]
+  },
+  {
+    "id": "m14", "slug": "warrior-1", "nameHe": "לוחם 1", "nameEn": "Warrior I",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors", "quads"], "secondary": ["shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["עמוד ורגל אחת קדימה", "כופף ברך קדמית ל-90 מעלות", "הישאר ידיים מעל הראש", "הרגש מתח בירך האחורית"],
+    "tips": ["כפות רגליים מקבילות"],
+    "videoYouTubeId": "k51YE5W5LJE",
+    "tags": ["yoga", "strength", "flexibility"]
+  },
+  {
+    "id": "m15", "slug": "seated-piriformis-stretch", "nameHe": "מתיחת פיריפורמיס יושב", "nameEn": "Piriformis Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["glutes"], "secondary": ["hip_flexors"] },
+    "difficulty": "beginner",
+    "instructions": ["שב על כיסא", "הנח קרסול אחד על ברך שנייה", "נטה קדימה", "הרגש מתח בגלוטאוס"],
+    "tips": ["גב ישר בעת הנטייה קדימה"],
+    "videoYouTubeId": "NnbvTCp6YP0",
+    "tags": ["stretching", "glutes", "sciatica"]
+  },
+  {
+    "id": "m16", "slug": "neck-stretch", "nameHe": "מתיחת צוואר", "nameEn": "Neck Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["neck"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["שב או עמוד זקוף", "הרכן ראש לצד אחד", "השתמש ביד קלות למשוך", "שמור 30 שניות לכל צד"],
+    "tips": ["תנועות עדינות בלבד"],
+    "videoYouTubeId": "eN8pNUqf1IY",
+    "tags": ["stretching", "neck", "desk_worker"]
+  },
+  {
+    "id": "m17", "slug": "couch-stretch", "nameHe": "מתיחת ספה", "nameEn": "Couch Stretch",
+    "category": "stretching", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors", "quads"], "secondary": [] },
+    "difficulty": "intermediate",
+    "instructions": ["ברוך עם קרסול אחד מוטה על ספה/קיר מאחורי", "ירך קדמית ב-90 מעלות", "הישר גוף", "הרגש מתח עמוק"],
+    "tips": ["מתיחה עמוקה - שמור על בטן מהודקת"],
+    "videoYouTubeId": "UGEpQ1vgaLo",
+    "tags": ["stretching", "hip_flexors", "advanced_stretch"]
+  },
+  {
+    "id": "m18", "slug": "lizard-pose", "nameHe": "פוזת לטאה", "nameEn": "Lizard Pose",
+    "category": "yoga", "equipment": ["none"],
+    "muscleGroups": { "primary": ["hip_flexors", "glutes"], "secondary": ["hamstrings"] },
+    "difficulty": "intermediate",
+    "instructions": ["מתחיל מ-lunge עם רגל קדמית", "הנח שתי הידיים מחוץ לרגל הקדמית", "ניתן להוריד למרפקים", "שמור עמוד שדרה ישר"],
+    "tips": ["נשום עמוק לתוך המתיחה"],
+    "videoYouTubeId": "zegNKIJQPMY",
+    "tags": ["yoga", "hip_opening", "intermediate"]
+  }
+]

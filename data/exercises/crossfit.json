@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cf1", "slug": "thruster", "nameHe": "ת׳ראסטר", "nameEn": "Thruster",
+    "category": "crossfit", "equipment": ["barbell", "dumbbells"],
+    "muscleGroups": { "primary": ["quads", "shoulders"], "secondary": ["glutes", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["תפוס מוט בגובה כתפיים", "בצע סקוואט מלא", "בתחתית, הנע לדחיפת מוט מעל הראש", "הישר ידיים לחלוטין"],
+    "tips": ["תנועה רציפה ואחידה"],
+    "videoYouTubeId": "L219ltL15zk",
+    "tags": ["crossfit", "compound", "full_body"]
+  },
+  {
+    "id": "cf2", "slug": "clean-and-jerk", "nameHe": "קלין אנד ג׳רק", "nameEn": "Clean and Jerk",
+    "category": "crossfit", "equipment": ["barbell"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "advanced",
+    "instructions": ["משוך את המוט מהרצפה", "קפוץ ומשוך חזק כלפי מעלה", "קבל את המוט על הכתפיים", "דחוף מעל הראש עם ספליט רגליים"],
+    "tips": ["למידת הטכניקה דורשת זמן - התאמן עם מוט ריק תחילה"],
+    "videoYouTubeId": "2HkaO3HZkHw",
+    "tags": ["crossfit", "olympic", "advanced"]
+  },
+  {
+    "id": "cf3", "slug": "snatch", "nameHe": "סנאץ׳", "nameEn": "Snatch",
+    "category": "crossfit", "equipment": ["barbell"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "advanced",
+    "instructions": ["אחיזה רחבה על המוט", "משוך את המוט מהרצפה בתנועה מהירה", "קבל את המוט מעל הראש", "הישר ידיים ורגליים"],
+    "tips": ["תרגיל טכני מאוד - לעבוד עם מאמן"],
+    "videoYouTubeId": "9xQp2sldyts",
+    "tags": ["crossfit", "olympic", "advanced"]
+  },
+  {
+    "id": "cf4", "slug": "kettlebell-swing", "nameHe": "קטלבל סווינג", "nameEn": "Kettlebell Swing",
+    "category": "crossfit", "equipment": ["kettlebells"],
+    "muscleGroups": { "primary": ["glutes", "hamstrings"], "secondary": ["core", "shoulders"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד עם רגליים ברוחת כתפיים וקטלבל לפניך", "כפוף בירכיים ותפוס", "דחוף בירכיים ותנד את הקטלבל", "שמור על גב ישר"],
+    "tips": ["התנועה בירכיים, לא בגב"],
+    "videoYouTubeId": "YSxHifyI6s8",
+    "tags": ["crossfit", "conditioning", "full_body"]
+  },
+  {
+    "id": "cf5", "slug": "box-jump", "nameHe": "קפיצה לקופסה", "nameEn": "Box Jump",
+    "category": "crossfit", "equipment": ["none"],
+    "muscleGroups": { "primary": ["quads", "glutes"], "secondary": ["calves", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד מול הקופסה", "כופף ברכיים ונדנד ידיים", "קפוץ עם שתי הרגליים על הקופסה", "הישר עמידה על הקופסה", "ירד בזהירות"],
+    "tips": ["נחיתה רכה עם ברכיים כפופות"],
+    "videoYouTubeId": "52r_Ul5k03g",
+    "tags": ["crossfit", "plyometric", "power"]
+  },
+  {
+    "id": "cf6", "slug": "wall-ball", "nameHe": "וול בול", "nameEn": "Wall Ball",
+    "category": "crossfit", "equipment": ["none"],
+    "muscleGroups": { "primary": ["quads", "shoulders"], "secondary": ["glutes", "core"] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד מול הקיר עם כדור רפואי", "בצע סקוואט", "בעלייה זרוק את הכדור לנקודה גבוהה על הקיר", "תפוס את הכדור בחזרה"],
+    "tips": ["שמור על קצב אחיד"],
+    "videoYouTubeId": "fpUD0mcFp_0",
+    "tags": ["crossfit", "conditioning", "full_body"]
+  },
+  {
+    "id": "cf7", "slug": "double-under", "nameHe": "דאבל אנדר", "nameEn": "Double Under",
+    "category": "crossfit", "equipment": ["none"],
+    "muscleGroups": { "primary": ["calves"], "secondary": ["core", "shoulders"] },
+    "difficulty": "advanced",
+    "instructions": ["קחו חבל קפיצה", "קפצו ותסובבו את החבל פעמיים לכל קפיצה", "שמרו על קצב אחיד"],
+    "tips": ["ידיים קרובות לגוף, כפות ידיים מסובבות"],
+    "videoYouTubeId": "82jNjDS19lg",
+    "tags": ["crossfit", "cardio", "advanced"]
+  },
+  {
+    "id": "cf8", "slug": "toes-to-bar", "nameHe": "בהונות לבר", "nameEn": "Toes to Bar",
+    "category": "crossfit", "equipment": ["pull_up_bar"],
+    "muscleGroups": { "primary": ["core"], "secondary": ["back", "shoulders"] },
+    "difficulty": "advanced",
+    "instructions": ["תלה על מוט", "הרם את הרגליים עד לנגיעה בבר", "הורד לאט"],
+    "tips": ["ניתן להתחיל עם ברכיים לחזה"],
+    "videoYouTubeId": "AkFP9JKXFZk",
+    "tags": ["crossfit", "core", "advanced"]
+  },
+  {
+    "id": "cf9", "slug": "handstand-push-up", "nameHe": "לחיצת הידיים על הראש", "nameEn": "Handstand Push-Up",
+    "category": "crossfit", "equipment": ["none"],
+    "muscleGroups": { "primary": ["shoulders", "triceps"], "secondary": ["core"] },
+    "difficulty": "advanced",
+    "instructions": ["עמוד הפוך על הקיר", "כופף מרפקים ורד ראש לרצפה", "דחוף חזרה למעלה"],
+    "tips": ["התחל עם לחיצות כתפיים מורחבות לפני ההפיכה"],
+    "videoYouTubeId": "OPT1f2HA00E",
+    "tags": ["crossfit", "advanced", "bodyweight"]
+  },
+  {
+    "id": "cf10", "slug": "muscle-up", "nameHe": "מאסל אפ", "nameEn": "Muscle-Up",
+    "category": "crossfit", "equipment": ["pull_up_bar"],
+    "muscleGroups": { "primary": ["back", "chest", "triceps"], "secondary": ["core"] },
+    "difficulty": "advanced",
+    "instructions": ["תלה על מוט", "משוך עצמך בתנועה חזקה מעל המוט", "דחוף למעלה כמו בדיפ", "הישר זרועות מעל"],
+    "tips": ["דרוש מתחים וציפים חזקים לפני"],
+    "videoYouTubeId": "o3BqEu-CHBM",
+    "tags": ["crossfit", "advanced", "gymnastics"]
+  },
+  {
+    "id": "cf11", "slug": "power-clean", "nameHe": "פאוור קלין", "nameEn": "Power Clean",
+    "category": "crossfit", "equipment": ["barbell"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "advanced",
+    "instructions": ["משוך מוט בתנועת שלב אחד לכתפיים", "קבל את המוט מעל לירכיים כפופות קלות"],
+    "tips": ["שמור על מוט קרוב לגוף"],
+    "videoYouTubeId": "YQPpf5qkqFs",
+    "tags": ["crossfit", "olympic", "power"]
+  },
+  {
+    "id": "cf12", "slug": "rope-climb", "nameHe": "טיפוס חבל", "nameEn": "Rope Climb",
+    "category": "crossfit", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["back", "biceps"], "secondary": ["core"] },
+    "difficulty": "advanced",
+    "instructions": ["תפוס את החבל בשתי הידיים", "כרוך את החבל סביב הרגליים", "טפס עם ידיים לחלופין"],
+    "tips": ["טכניקת הרגליים חוסכת כוח"],
+    "videoYouTubeId": "q74BPbA7RKQ",
+    "tags": ["crossfit", "advanced", "gymnastics"]
+  }
+]

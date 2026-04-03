@@ -1,0 +1,122 @@
+[
+  {
+    "id": "c1", "slug": "easy-run", "nameHe": "ריצה קלה", "nameEn": "Easy Run",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "beginner",
+    "instructions": ["הכנסו לקצב שיכולים לדבר בו", "שמרו על קצב אחיד", "נשמו באף ופה"],
+    "tips": ["הדופק לא יעלה על 70% מהמקסימום"],
+    "videoYouTubeId": "brFHyOtTwH4",
+    "tags": ["running", "cardio", "aerobic"]
+  },
+  {
+    "id": "c2", "slug": "tempo-run", "nameHe": "ריצת טמפו", "nameEn": "Tempo Run",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "intermediate",
+    "instructions": ["חממו 10 דקות ריצה קלה", "הגבירו לקצב מאומץ (80-85% מהדופק)", "שמרו על קצב אחיד לזמן הנקוב", "צניחה 10 דקות ריצה קלה"],
+    "tips": ["הרגשה של 'קשה אבל אפשרי'"],
+    "videoYouTubeId": "YfEyFalRtl4",
+    "tags": ["running", "cardio", "tempo"]
+  },
+  {
+    "id": "c3", "slug": "interval-run", "nameHe": "ריצת אינטרוולים", "nameEn": "Interval Run",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "advanced",
+    "instructions": ["חממו 10-15 דקות", "ריצה מהירה לזמן הנקוב", "מנוחה פעילה (הליכה/ריצה איטית)", "חזרו על מספר הסטים"],
+    "tips": ["מנוחה שווה לזמן העבודה בהתחלה"],
+    "videoYouTubeId": "rGQRwBSBRYs",
+    "tags": ["running", "cardio", "intervals", "hiit"]
+  },
+  {
+    "id": "c4", "slug": "long-run", "nameHe": "ריצה ארוכה", "nameEn": "Long Run",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "intermediate",
+    "instructions": ["ריצה בקצב שיחה לאורך זמן ממושך", "שמרו על קצב אחיד ונשמו נשימות עמוקות", "הביאו מים לריצות ארוכות יותר מ-45 דקות"],
+    "tips": ["אכלו פחמימות 2 שעות לפני"],
+    "videoYouTubeId": "YLEqy3qkJOc",
+    "tags": ["running", "cardio", "endurance"]
+  },
+  {
+    "id": "c5", "slug": "hill-run", "nameHe": "ריצת גבעות", "nameEn": "Hill Run",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["quads", "glutes", "calves"], "secondary": ["core"] },
+    "difficulty": "advanced",
+    "instructions": ["מצאו גבעה עם שיפוע של 5-10%", "רוצו כלפי מעלה במאמץ גבוה", "הליכה או ריצה איטית חזרה למטה", "חזרו על מספר פעמים"],
+    "tips": ["נטו קדימה בעלייה", "צעדים קצרים יותר"],
+    "videoYouTubeId": "HJaRObGGaxo",
+    "tags": ["running", "cardio", "strength_endurance"]
+  },
+  {
+    "id": "c6", "slug": "jump-rope", "nameHe": "קפיצה בחבל", "nameEn": "Jump Rope",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["calves", "core"], "secondary": ["shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["תפסו את קצות החבל ידיים לצד הגוף", "קפצו בעקביות עם רגליים יחד", "שמרו על קצב אחיד", "נשמו בצורה סדירה"],
+    "tips": ["קפצו נמוך ככל האפשר"],
+    "videoYouTubeId": "FJmRQ5iTXKE",
+    "tags": ["cardio", "conditioning", "crossfit"]
+  },
+  {
+    "id": "c7", "slug": "rowing-machine", "nameHe": "מכונת חתירה", "nameEn": "Rowing Machine",
+    "category": "cardio", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["back", "core"], "secondary": ["quads", "shoulders"] },
+    "difficulty": "beginner",
+    "instructions": ["שב על המכשיר עם רגליים כפופות", "דחוף ברגליים תחילה", "הטה את הגוף לאחור", "משוך את הידיות לחזה"],
+    "tips": ["רגליים → גוף → ידיים בעת חתירה"],
+    "videoYouTubeId": "zAopChHXzc8",
+    "tags": ["cardio", "full_body", "low_impact"]
+  },
+  {
+    "id": "c8", "slug": "assault-bike", "nameHe": "אסאולט בייק", "nameEn": "Assault Bike",
+    "category": "cardio", "equipment": ["full_gym"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "intermediate",
+    "instructions": ["שב על האופניים ואחז את הידיות", "פדל ברגליים ומשוך-לחץ בידיים", "שמרו על קצב אחיד"],
+    "tips": ["פורק קלוריות גבוה, התאמצו לפרצי זמן"],
+    "videoYouTubeId": "aSfXp9j-5Uk",
+    "tags": ["cardio", "crossfit", "conditioning"]
+  },
+  {
+    "id": "c9", "slug": "swimming-freestyle", "nameHe": "שחייה חופשית", "nameEn": "Freestyle Swimming",
+    "category": "swimming", "equipment": ["none"],
+    "muscleGroups": { "primary": ["back", "shoulders"], "secondary": ["core", "legs"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הבטן במים", "הנע את הזרועות לחלופין מעל המים", "בעטות רגליים קבועות", "סובב את הראש לנשימה כל 2-3 תנועות"],
+    "tips": ["גוף שטוח ואופקי"],
+    "videoYouTubeId": "5HLW2AI8aB4",
+    "tags": ["swimming", "cardio", "full_body"]
+  },
+  {
+    "id": "c10", "slug": "swimming-backstroke", "nameHe": "שחייה גב", "nameEn": "Backstroke",
+    "category": "swimming", "equipment": ["none"],
+    "muscleGroups": { "primary": ["back", "shoulders"], "secondary": ["core"] },
+    "difficulty": "intermediate",
+    "instructions": ["שכב על הגב במים", "הנע זרועות לחלופין מאחורה", "בעטות רגליים", "הסתכל כלפי מעלה"],
+    "tips": ["ירכיים קרובות לפני המים"],
+    "videoYouTubeId": "FE63lYmJMFk",
+    "tags": ["swimming", "cardio"]
+  },
+  {
+    "id": "c11", "slug": "swimming-breaststroke", "nameHe": "שחייה חזה", "nameEn": "Breaststroke",
+    "category": "swimming", "equipment": ["none"],
+    "muscleGroups": { "primary": ["chest", "quads"], "secondary": ["core"] },
+    "difficulty": "beginner",
+    "instructions": ["שכב על הבטן", "משוך ידיים כלפי מטה בצורת U", "הבא רגליים לישבן ודחוף", "גלישה עד לאיטיות"],
+    "tips": ["תנועת הרגליים היא כמו צפרדע"],
+    "videoYouTubeId": "R9-GGApCwb4",
+    "tags": ["swimming", "cardio"]
+  },
+  {
+    "id": "c12", "slug": "burpee", "nameHe": "ברפי", "nameEn": "Burpee",
+    "category": "cardio", "equipment": ["none"],
+    "muscleGroups": { "primary": ["full_body"], "secondary": [] },
+    "difficulty": "intermediate",
+    "instructions": ["עמוד זקוף", "הנח ידיים על הרצפה", "קפוץ לתנוחת שכיבות סמיכה", "בצע שכיבת סמיכה", "קפוץ לחזרה לעמידה", "קפוץ עם ידיים מעל הראש"],
+    "tips": ["ניתן לוותר על שכיבת הסמיכה בהתחלה"],
+    "videoYouTubeId": "dZgVxmf6jkA",
+    "tags": ["crossfit", "cardio", "full_body", "conditioning"]
+  }
+]
