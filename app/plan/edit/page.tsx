@@ -20,6 +20,7 @@ const ALL_EXERCISES: Exercise[] = [
 ] as Exercise[]
 
 const DAY_NAMES = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
+const DAY_LETTERS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש']
 
 type ExerciseEntry = {
   slug: string
@@ -203,17 +204,17 @@ export default function EditPlanPage() {
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-3">ימי אימון</label>
             <div className="grid grid-cols-7 gap-1.5">
-              {DAY_NAMES.map((name, dow) => (
+              {DAY_LETTERS.map((letter, dow) => (
                 <button
                   key={dow}
                   onClick={() => toggleDay(dow)}
-                  className={`py-3 rounded-xl text-xs font-medium transition-all ${
+                  className={`py-3 rounded-xl text-sm font-bold transition-all ${
                     selectedDays.includes(dow)
                       ? 'bg-teal-500 text-white'
                       : 'bg-gray-800 text-gray-400'
                   }`}
                 >
-                  {name.slice(0, 2)}
+                  {letter}
                 </button>
               ))}
             </div>
