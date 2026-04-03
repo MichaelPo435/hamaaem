@@ -32,7 +32,7 @@ export function buildPlanPrompt(user: UserProfile): string {
   const level = LEVEL_LABELS[user.experienceLevel] || user.experienceLevel
   const equipment = user.equipment.map(e => EQUIPMENT_LABELS[e] || e).join(', ')
 
-  return `צור תוכנית אימון ל-4 שבועות עבור המשתמש הבא:
+  return `צור תוכנית אימון עבור המשתמש הבא:
 
 מטרות: ${goals}
 רמת ניסיון: ${level}
@@ -44,66 +44,36 @@ ${user.age ? `גיל: ${user.age}` : ''}
 ${user.weightKg ? `משקל: ${user.weightKg} ק"ג` : ''}
 
 חשוב:
-- כלול רק ימי אימון במערך days (אל תכלול ימי מנוחה עם isRestDay:true)
-- התרגילים חייבים להיות מתאימים לציוד הזמין
-- שמות תרגילים בשדה exerciseSlug: השתמש ב-slug האנגלי (squat, deadlift, bench-press, push-up, pull-up, lunge, plank, burpee, kettlebell-swing, thruster, box-jump, wall-ball, jump-rope, easy-run, tempo-run, interval-run, long-run, hill-run, rowing-machine, assault-bike, swimming-freestyle, etc.)
-- בכל תרגיל כלול nameHe בעברית
-- תוכנית מקדמת - שבוע 1 קל יותר, שבוע 8 הכי קשה
-- ימי מנוחה בין ימי אימון כבדים
+- צור רק ${user.weeklyAvailability} אימונים (ימי מנוחה אל תכלול בכלל)
+- כל אימון: חימום (1 תרגיל), בלוק ראשי (3-4 תרגילים), קירור (1 תרגיל)
+- exerciseSlug: slug אנגלי בלבד (squat, deadlift, bench-press, push-up, pull-up, lunge, plank, burpee, easy-run, tempo-run, interval-run, kettlebell-swing, thruster, box-jump)
+- nameHe: שם בעברית לכל תרגיל
 
-החזר JSON בלבד (ללא הסברים נוספים) לפי הסכמה:
+החזר JSON בלבד:
 {
-  "title": "כותרת תוכנית בעברית",
-  "description": "תיאור קצר בעברית",
+  "title": "כותרת בעברית",
+  "description": "תיאור קצר",
   "type": "${user.goals[0]}",
-  "durationWeeks": 4,
-  "weeks": [
+  "days": [
     {
-      "weekNumber": 1,
-      "theme": "שבוע בסיס",
-      "days": [
+      "dayIndex": 0,
+      "title": "שם האימון",
+      "type": "${user.goals[0]}",
+      "estimatedDurationMinutes": ${user.sessionDuration},
+      "blocks": [
         {
-          "dayOfWeek": 0,
-          "isRestDay": false,
-          "session": {
-            "id": "unique-id",
-            "title": "שם האימון",
-            "type": "${user.goals[0]}",
-            "estimatedDurationMinutes": ${user.sessionDuration},
-            "blocks": [
-              {
-                "id": "block-id",
-                "title": "חימום",
-                "type": "warmup",
-                "exercises": [
-                  {
-                    "exerciseSlug": "easy-run",
-                    "nameHe": "ריצה קלה",
-                    "durationSeconds": 300
-                  }
-                ]
-              },
-              {
-                "id": "block-id-2",
-                "title": "בלוק ראשי",
-                "type": "main",
-                "exercises": [
-                  {
-                    "exerciseSlug": "squat",
-                    "nameHe": "סקוואט",
-                    "sets": 3,
-                    "reps": "8-10",
-                    "weightNote": "70% מ-1RM",
-                    "restSeconds": 90
-                  }
-                ]
-              }
-            ]
-          }
+          "id": "w-b1",
+          "title": "חימום",
+          "type": "warmup",
+          "exercises": [{"exerciseSlug": "easy-run", "nameHe": "ריצה קלה", "durationSeconds": 300}]
         },
         {
-          "dayOfWeek": 2,
-          "isRestDay": true
+          "id": "w-b2",
+          "title": "בלוק ראשי",
+          "type": "main",
+          "exercises": [
+            {"exerciseSlug": "squat", "nameHe": "סקוואט", "sets": 3, "reps": "8-10", "restSeconds": 90}
+          ]
         }
       ]
     }
