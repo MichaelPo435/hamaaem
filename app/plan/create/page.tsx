@@ -20,6 +20,7 @@ const ALL_EXERCISES: Exercise[] = [
 ] as Exercise[]
 
 const DAY_NAMES = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
+const NUM_WEEKS = 4
 
 type ExerciseEntry = {
   slug: string
@@ -34,6 +35,9 @@ type DaySession = {
   exercises: ExerciseEntry[]
 }
 
+// sessions[weekIdx][dow]
+type AllSessions = Record<number, Record<number, DaySession>>
+
 export default function CreatePlanPage() {
   const router = useRouter()
   const user = useUserStore(s => s.user)
@@ -42,12 +46,14 @@ export default function CreatePlanPage() {
   const [step, setStep] = useState(1)
   const [planName, setPlanName] = useState('תוכנית האימון שלי')
   const [selectedDays, setSelectedDays] = useState<number[]>([0, 2, 4])
-  const [sessions, setSessions] = useState<Record<number, DaySession>>({})
+  const [sessions, setSessions] = useState<AllSessions>({})
+  const [activeWeekIdx, setActiveWeekIdx] = useState(0)
   const [activeDayIdx, setActiveDayIdx] = useState(0)
   const [search, setSearch] = useState('')
 
   const activeDay = selectedDays[activeDayIdx]
-  const session: DaySession = sessions[activeDay] ?? { title: `אימון ${DAY_NAMES[activeDay]}`, exercises: [] }
+  const weekSessions = sessions[activeWeekIdx] ?? {}
+  const session: DaySession = weekSessions[activeDay] ?? { title: `אימון ${DAY_NAMES[activeDay]}`, exercises: [] }
 
   const filteredExercises = useMemo(() => {
     if (!search.trim()) return ALL_EXERCISES.slice(0, 25)
@@ -68,7 +74,10 @@ export default function CreatePlanPage() {
   function updateSession(updates: Partial<DaySession>) {
     setSessions(prev => ({
       ...prev,
-      [activeDay]: { ...session, ...updates },
+      [activeWeekIdx]: {
+        ...prev[activeWeekIdx],
+        [activeDay]: { ...session, ...updates },
+      },
     }))
   }
 
@@ -92,14 +101,14 @@ export default function CreatePlanPage() {
   function savePlan() {
     if (!user) return
 
-    const weeks = Array.from({ length: 4 }, (_, weekIdx) => ({
+    const weeks = Array.from({ length: NUM_WEEKS }, (_, weekIdx) => ({
       weekNumber: weekIdx + 1,
       theme: `שבוע ${weekIdx + 1}`,
       days: Array.from({ length: 7 }, (_, dow) => {
         if (!selectedDays.includes(dow)) {
           return { dayOfWeek: dow as 0|1|2|3|4|5|6, isRestDay: true }
         }
-        const s = sessions[dow] ?? { title: `אימון ${DAY_NAMES[dow]}`, exercises: [] }
+        const s = sessions[weekIdx]?.[dow] ?? { title: `אימון ${DAY_NAMES[dow]}`, exercises: [] }
         return {
           dayOfWeek: dow as 0|1|2|3|4|5|6,
           isRestDay: false,
@@ -133,7 +142,7 @@ export default function CreatePlanPage() {
       title: planName,
       description: 'תוכנית אימון אישית',
       type: user.goals[0],
-      durationWeeks: 4,
+      durationWeeks: NUM_WEEKS,
       level: user.experienceLevel,
       status: 'active',
       weeks,
@@ -182,7 +191,7 @@ export default function CreatePlanPage() {
           </div>
 
           <button
-            onClick={() => { setActiveDayIdx(0); setStep(2) }}
+            onClick={() => { setActiveWeekIdx(0); setActiveDayIdx(0); setStep(2) }}
             disabled={selectedDays.length === 0 || !planName.trim()}
             className="w-full py-4 bg-orange-500 text-white rounded-2xl font-bold text-base disabled:opacity-40"
           >
@@ -193,37 +202,56 @@ export default function CreatePlanPage() {
     )
   }
 
-  // Step 2: Exercise builder per day
+  // Step 2: Exercise builder per week × day
   return (
     <div className="pb-8">
       {/* Sticky header */}
       <div className="sticky top-0 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-10 px-4 py-3">
-        <div className="flex items-center justify-between mb-2">
+        {/* Week selector */}
+        <div className="flex gap-2 mb-3 overflow-x-auto scrollbar-hide">
+          {Array.from({ length: NUM_WEEKS }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => { setActiveWeekIdx(i); setActiveDayIdx(0); setSearch('') }}
+              className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                activeWeekIdx === i
+                  ? 'bg-orange-500 text-white'
+                  : 'bg-gray-800 text-gray-400'
+              }`}
+            >
+              שבוע {i + 1}
+            </button>
+          ))}
           <button
-            onClick={() => activeDayIdx === 0 ? setStep(1) : setActiveDayIdx(i => i - 1)}
+            onClick={savePlan}
+            className="flex-shrink-0 mr-auto bg-green-500 text-white px-4 py-1.5 rounded-lg text-xs font-bold"
+          >
+            שמור ✓
+          </button>
+        </div>
+
+        {/* Day navigation */}
+        <div className="flex items-center justify-between">
+          <button
+            onClick={() => {
+              if (activeDayIdx === 0) setStep(1)
+              else { setActiveDayIdx(i => i - 1); setSearch('') }
+            }}
             className="text-gray-400 text-sm px-2 py-1"
           >
             {activeDayIdx === 0 ? '→ חזור' : `→ ${DAY_NAMES[selectedDays[activeDayIdx - 1]]}`}
           </button>
-          <span className="text-xs text-gray-500">{activeDayIdx + 1} / {selectedDays.length}</span>
+          <span className="font-bold text-white text-sm">יום {DAY_NAMES[activeDay]}</span>
           {activeDayIdx < selectedDays.length - 1 ? (
             <button
-              onClick={() => setActiveDayIdx(i => i + 1)}
+              onClick={() => { setActiveDayIdx(i => i + 1); setSearch('') }}
               className="text-orange-400 text-sm font-medium px-2 py-1"
             >
               {DAY_NAMES[selectedDays[activeDayIdx + 1]]} ←
             </button>
           ) : (
-            <button
-              onClick={savePlan}
-              className="bg-green-500 text-white px-4 py-1.5 rounded-xl text-sm font-bold"
-            >
-              שמור תוכנית
-            </button>
+            <span className="text-xs text-gray-600 px-2">יום אחרון</span>
           )}
-        </div>
-        <div className="text-center">
-          <span className="font-bold text-white text-base">יום {DAY_NAMES[activeDay]}</span>
         </div>
       </div>
 
