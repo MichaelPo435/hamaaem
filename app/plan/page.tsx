@@ -5,8 +5,7 @@ import { usePlanStore } from '@/lib/store/planStore'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { Plus, Play, ChevronLeft, Pencil } from 'lucide-react'
 
-const HEB_DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש']
-const HEB_DAYS_FULL = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
+const HEB_DAYS = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
 
 const TYPE_LABELS: Record<string, string> = {
   running: 'ריצה',
@@ -83,35 +82,41 @@ export default function PlanPage() {
           )}
         </div>
 
-        {/* Weekly grid */}
+        {/* Weekly list */}
         {week && (
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">לוח שבועי</h3>
-            <div className="grid grid-cols-7 gap-1">
-              {HEB_DAYS.map((d, i) => {
-                const dayData = week.days.find(day => day.dayOfWeek === i)
-                const isRest = !dayData || dayData.isRestDay
-                const isSelected = selectedDay === i
-                const today = new Date().getDay() === i
+          <div className="space-y-2">
+            {HEB_DAYS.map((d, i) => {
+              const dayData = week.days.find(day => day.dayOfWeek === i)
+              const isRest = !dayData || dayData.isRestDay
+              const isSelected = selectedDay === i
+              const today = new Date().getDay() === i
 
-                return (
-                  <button
-                    key={i}
-                    onClick={() => setSelectedDay(isSelected ? null : i)}
-                    className={`flex flex-col items-center py-2 px-1 rounded-xl transition-all ${
-                      isSelected
-                        ? 'bg-teal-500 text-white'
-                        : today
-                        ? 'bg-gray-800 border-2 border-teal-500'
-                        : 'bg-gray-800'
-                    }`}
-                  >
-                    <span className={`text-xs font-medium ${isSelected ? 'text-white' : 'text-gray-400'}`}>{d}</span>
-                    <span className="text-lg mt-1">{isRest ? '😴' : '💪'}</span>
-                  </button>
-                )
-              })}
-            </div>
+              return (
+                <button
+                  key={i}
+                  onClick={() => setSelectedDay(isSelected ? null : i)}
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${
+                    isSelected
+                      ? 'bg-teal-500 text-white'
+                      : today
+                      ? 'bg-gray-800 border-2 border-teal-500'
+                      : 'bg-gray-800'
+                  }`}
+                >
+                  <span className={`font-semibold text-sm ${isSelected ? 'text-white' : today ? 'text-teal-400' : 'text-gray-200'}`}>
+                    יום {d}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    {!isRest && dayData?.session && (
+                      <span className={`text-xs ${isSelected ? 'text-white/80' : 'text-gray-400'}`}>
+                        {dayData.session.title}
+                      </span>
+                    )}
+                    <span className="text-base">{isRest ? '😴' : '💪'}</span>
+                  </div>
+                </button>
+              )
+            })}
           </div>
         )}
 
@@ -122,7 +127,7 @@ export default function PlanPage() {
               <div>
                 <h3 className="font-bold text-white">{selectedDayData.session.title}</h3>
                 <p className="text-sm text-gray-400">
-                  יום {HEB_DAYS_FULL[selectedDayData.dayOfWeek]} · {selectedDayData.session.estimatedDurationMinutes} דקות
+                  יום {HEB_DAYS[selectedDayData.dayOfWeek]} · {selectedDayData.session.estimatedDurationMinutes} דקות
                 </p>
               </div>
               <Link
