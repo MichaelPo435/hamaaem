@@ -8,6 +8,7 @@ interface PlanStore {
   activePlan: TrainingPlan | null
   setActivePlan: (plan: TrainingPlan) => void
   addPlan: (plan: TrainingPlan) => void
+  updatePlan: (plan: TrainingPlan) => void
   archivePlan: (id: string) => void
   deletePlan: (id: string) => void
   getActivePlan: () => TrainingPlan | null
@@ -30,6 +31,12 @@ export const usePlanStore = create<PlanStore>()(
         set((state) => ({
           plans: [plan, ...state.plans.map(p => ({ ...p, status: p.status === 'active' ? 'archived' as const : p.status }))],
           activePlan: plan,
+        }))
+      },
+      updatePlan: (plan) => {
+        set((state) => ({
+          plans: state.plans.map(p => p.id === plan.id ? plan : p),
+          activePlan: state.activePlan?.id === plan.id ? plan : state.activePlan,
         }))
       },
       archivePlan: (id) => {

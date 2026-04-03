@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePlanStore } from '@/lib/store/planStore'
 import { PageHeader } from '@/components/layout/PageHeader'
-import { Plus, Play, ChevronLeft } from 'lucide-react'
+import { Plus, Play, ChevronLeft, Pencil } from 'lucide-react'
 
 const HEB_DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש']
 const HEB_DAYS_FULL = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
@@ -48,9 +48,14 @@ export default function PlanPage() {
         title={activePlan.title}
         subtitle={`${activePlan.durationWeeks} שבועות · ${TYPE_LABELS[activePlan.type] || activePlan.type}`}
         action={
-          <Link href="/plan/create" className="p-2 rounded-xl bg-orange-950/40">
-            <Plus size={18} className="text-orange-500" />
-          </Link>
+          <div className="flex gap-2">
+            <Link href="/plan/edit" className="p-2 rounded-xl bg-gray-800">
+              <Pencil size={18} className="text-gray-400" />
+            </Link>
+            <Link href="/plan/create" className="p-2 rounded-xl bg-orange-950/40">
+              <Plus size={18} className="text-orange-500" />
+            </Link>
+          </div>
         }
       />
 
