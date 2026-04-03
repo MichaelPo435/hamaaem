@@ -133,6 +133,12 @@ export default function ProfilePage() {
                 <div className="text-xs opacity-70">ק״ג</div>
               </div>
             )}
+            {user.heightCm && (
+              <div>
+                <div className="text-2xl font-bold">{user.heightCm}</div>
+                <div className="text-xs opacity-70">ס״מ</div>
+              </div>
+            )}
           </div>
         </div>
 

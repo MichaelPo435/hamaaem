@@ -38,15 +38,16 @@ const INJURIES = [
 ]
 
 interface OnboardingData {
+  name: string
+  age: string
+  weightKg: string
+  heightCm: string
   goals: TrainingGoal[]
   experienceLevel: ExperienceLevel | ''
   weeklyAvailability: number
   sessionDuration: 30 | 45 | 60 | 90
   equipment: EquipmentType[]
   injuries: string[]
-  age: string
-  weightKg: string
-  name: string
 }
 
 export default function OnboardingPage() {
@@ -54,15 +55,16 @@ export default function OnboardingPage() {
   const setUser = useUserStore(s => s.setUser)
   const [step, setStep] = useState(0)
   const [data, setData] = useState<OnboardingData>({
+    name: '',
+    age: '',
+    weightKg: '',
+    heightCm: '',
     goals: [],
     experienceLevel: '',
     weeklyAvailability: 3,
     sessionDuration: 60,
     equipment: [],
     injuries: [],
-    age: '',
-    weightKg: '',
-    name: '',
   })
 
   const totalSteps = 6
@@ -90,10 +92,11 @@ export default function OnboardingPage() {
   }
 
   function canProceed() {
-    if (step === 0) return data.goals.length > 0
-    if (step === 1) return data.experienceLevel !== ''
-    if (step === 2) return true
-    if (step === 3) return data.equipment.length > 0
+    if (step === 0) return data.name.trim() !== '' && data.age !== '' && data.weightKg !== '' && data.heightCm !== ''
+    if (step === 1) return data.goals.length > 0
+    if (step === 2) return data.experienceLevel !== ''
+    if (step === 3) return true
+    if (step === 4) return data.equipment.length > 0
     return true
   }
 
@@ -101,15 +104,16 @@ export default function OnboardingPage() {
     const user: UserProfile = {
       id: crypto.randomUUID(),
       createdAt: new Date().toISOString(),
-      name: data.name || undefined,
+      name: data.name,
       goals: data.goals,
       experienceLevel: data.experienceLevel as ExperienceLevel,
       weeklyAvailability: data.weeklyAvailability,
       sessionDuration: data.sessionDuration,
       equipment: data.equipment,
       injuries: data.injuries,
-      age: data.age ? parseInt(data.age) : undefined,
-      weightKg: data.weightKg ? parseFloat(data.weightKg) : undefined,
+      age: parseInt(data.age),
+      weightKg: parseFloat(data.weightKg),
+      heightCm: parseFloat(data.heightCm),
       onboardingCompleted: true,
       planGenerationsToday: 0,
     }
@@ -117,8 +121,64 @@ export default function OnboardingPage() {
     router.push('/plan/create')
   }
 
+  const inputClass = "w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
+
   const steps = [
-    // Step 0: Goals
+    // Step 0: Personal details (required)
+    <div key="details">
+      <h2 className="text-xl font-bold text-white mb-2">ספר לנו עלייך 👋</h2>
+      <p className="text-gray-400 text-sm mb-6">כל הפרטים נדרשים להתאמת התוכנית</p>
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">שם <span className="text-teal-400">*</span></label>
+          <input
+            type="text"
+            value={data.name}
+            onChange={e => setData(d => ({ ...d, name: e.target.value }))}
+            placeholder="כיצד לקרוא לך?"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">גיל <span className="text-teal-400">*</span></label>
+          <input
+            type="number"
+            value={data.age}
+            onChange={e => setData(d => ({ ...d, age: e.target.value }))}
+            placeholder="גיל"
+            min="10"
+            max="100"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">משקל בק&quot;ג <span className="text-teal-400">*</span></label>
+          <input
+            type="number"
+            value={data.weightKg}
+            onChange={e => setData(d => ({ ...d, weightKg: e.target.value }))}
+            placeholder="משקל"
+            min="30"
+            max="300"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">גובה בס&quot;מ <span className="text-teal-400">*</span></label>
+          <input
+            type="number"
+            value={data.heightCm}
+            onChange={e => setData(d => ({ ...d, heightCm: e.target.value }))}
+            placeholder="גובה"
+            min="100"
+            max="250"
+            className={inputClass}
+          />
+        </div>
+      </div>
+    </div>,
+
+    // Step 1: Goals
     <div key="goals">
       <h2 className="text-xl font-bold text-white mb-2">מה המטרות שלך? 🎯</h2>
       <p className="text-gray-400 text-sm mb-6">בחר אחת או יותר</p>
@@ -141,7 +201,7 @@ export default function OnboardingPage() {
       </div>
     </div>,
 
-    // Step 1: Level
+    // Step 2: Level
     <div key="level">
       <h2 className="text-xl font-bold text-white mb-2">מה הרמה שלך? 📊</h2>
       <p className="text-gray-400 text-sm mb-6">זה עוזר לנו לכייל את הקושי</p>
@@ -166,7 +226,7 @@ export default function OnboardingPage() {
       </div>
     </div>,
 
-    // Step 2: Availability
+    // Step 3: Availability
     <div key="availability">
       <h2 className="text-xl font-bold text-white mb-2">כמה אתה מתאמן? ⏰</h2>
       <p className="text-gray-400 text-sm mb-6">ימים ומשך כל אימון</p>
@@ -212,7 +272,7 @@ export default function OnboardingPage() {
       </div>
     </div>,
 
-    // Step 3: Equipment
+    // Step 4: Equipment
     <div key="equipment">
       <h2 className="text-xl font-bold text-white mb-2">איזה ציוד יש לך? 🏋️</h2>
       <p className="text-gray-400 text-sm mb-6">בחר את כל מה שרלוונטי</p>
@@ -234,10 +294,10 @@ export default function OnboardingPage() {
       </div>
     </div>,
 
-    // Step 4: Injuries
+    // Step 5: Injuries
     <div key="injuries">
       <h2 className="text-xl font-bold text-white mb-2">יש פציעות או מגבלות? 🩹</h2>
-      <p className="text-gray-400 text-sm mb-6">אופציונלי - עוזר לנו להתאים את התוכנית</p>
+      <p className="text-gray-400 text-sm mb-6">עוזר לנו להתאים את התוכנית — דלג אם אין</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {INJURIES.map(inj => (
           <button
@@ -254,44 +314,6 @@ export default function OnboardingPage() {
         ))}
       </div>
       <p className="text-xs text-gray-500 mt-2">לחץ לסימון, לחץ שוב לביטול</p>
-    </div>,
-
-    // Step 5: Personal details
-    <div key="details">
-      <h2 className="text-xl font-bold text-white mb-2">קצת עלייך 😊</h2>
-      <p className="text-gray-400 text-sm mb-6">כל הנתונים אופציונליים</p>
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1">שם (אופציונלי)</label>
-          <input
-            type="text"
-            value={data.name}
-            onChange={e => setData(d => ({ ...d, name: e.target.value }))}
-            placeholder="כיצד לקרוא לך?"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1">גיל (אופציונלי)</label>
-          <input
-            type="number"
-            value={data.age}
-            onChange={e => setData(d => ({ ...d, age: e.target.value }))}
-            placeholder="גיל"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1">משקל בק"ג (אופציונלי)</label>
-          <input
-            type="number"
-            value={data.weightKg}
-            onChange={e => setData(d => ({ ...d, weightKg: e.target.value }))}
-            placeholder="משקל"
-            className="w-full p-3 rounded-xl border border-gray-700 bg-gray-800 text-white text-right focus:outline-none focus:border-teal-500 placeholder:text-gray-500"
-          />
-        </div>
-      </div>
     </div>,
   ]
 
