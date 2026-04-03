@@ -114,7 +114,7 @@ export default function OnboardingPage() {
       planGenerationsToday: 0,
     }
     setUser(user)
-    router.push('/plan/generate')
+    router.push('/plan/create')
   }
 
   const steps = [

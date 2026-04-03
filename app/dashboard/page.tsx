@@ -70,13 +70,13 @@ export default function DashboardPage() {
             <div className="bg-orange-950/30 border-2 border-dashed border-orange-800 rounded-2xl p-6 text-center">
               <div className="text-3xl mb-2">📋</div>
               <div className="font-semibold text-gray-200 mb-1">אין תוכנית אימון פעילה</div>
-              <div className="text-sm text-gray-400 mb-4">צור תוכנית מותאמת אישית עם AI</div>
+              <div className="text-sm text-gray-400 mb-4">בנה תוכנית אישית עם התרגילים שלך</div>
               <Link
-                href="/plan/generate"
+                href="/plan/create"
                 className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
               >
                 <Plus size={16} />
-                צור תוכנית
+                בנה תוכנית
               </Link>
             </div>
           )}

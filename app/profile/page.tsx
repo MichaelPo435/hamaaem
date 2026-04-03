@@ -133,11 +133,11 @@ export default function ProfilePage() {
         {/* Actions */}
         <div className="space-y-3 pb-4">
           <Link
-            href="/plan/generate"
+            href="/plan/create"
             className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl border-2 border-orange-500 text-orange-500 font-bold"
           >
             <RefreshCw size={18} />
-            צור תוכנית חדשה
+            בנה תוכנית חדשה
           </Link>
           <button
             onClick={handleReset}

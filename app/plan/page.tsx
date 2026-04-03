@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePlanStore } from '@/lib/store/planStore'
 import { PageHeader } from '@/components/layout/PageHeader'
-import { Plus, Play, ChevronLeft, RotateCcw } from 'lucide-react'
+import { Plus, Play, ChevronLeft } from 'lucide-react'
 
 const HEB_DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש']
 const HEB_DAYS_FULL = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
@@ -27,13 +27,13 @@ export default function PlanPage() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] px-6 text-center">
         <div className="text-5xl mb-4">📋</div>
         <h2 className="text-xl font-bold text-white mb-2">אין תוכנית פעילה</h2>
-        <p className="text-gray-400 text-sm mb-6">צור תוכנית אימון מותאמת אישית עם Claude AI</p>
+        <p className="text-gray-400 text-sm mb-6">בנה תוכנית אימון משלך עם התרגילים שאתה בוחר</p>
         <Link
-          href="/plan/generate"
+          href="/plan/create"
           className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-2xl font-bold"
         >
           <Plus size={18} />
-          צור תוכנית חדשה
+          בנה תוכנית חדשה
         </Link>
       </div>
     )
@@ -48,8 +48,8 @@ export default function PlanPage() {
         title={activePlan.title}
         subtitle={`${activePlan.durationWeeks} שבועות · ${TYPE_LABELS[activePlan.type] || activePlan.type}`}
         action={
-          <Link href="/plan/generate" className="p-2 rounded-xl bg-orange-950/40">
-            <RotateCcw size={18} className="text-orange-500" />
+          <Link href="/plan/create" className="p-2 rounded-xl bg-orange-950/40">
+            <Plus size={18} className="text-orange-500" />
           </Link>
         }
       />
