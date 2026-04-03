@@ -74,16 +74,15 @@ export default function GeneratePlanPage() {
   if (error) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
-        <div className="text-5xl mb-4">🔧</div>
-        <h2 className="text-xl font-bold text-white mb-2">השירות בתחזוקה</h2>
-        <p className="text-gray-400 mb-2 text-sm">יצירת תוכנית AI אינה זמינה כרגע.</p>
-        <p className="text-gray-500 mb-6 text-xs">נחזור בקרוב עם התכונה הזו 💪</p>
+        <div className="text-5xl mb-4">😕</div>
+        <h2 className="text-xl font-bold text-white mb-2">אופס!</h2>
+        <p className="text-gray-400 mb-6 text-sm">{error}</p>
         <div className="space-y-3 w-full max-w-xs">
           <button
-            onClick={() => router.replace('/dashboard')}
+            onClick={() => { setError(''); window.location.reload() }}
             className="w-full py-3 rounded-2xl bg-orange-500 text-white font-bold"
           >
-            חזור לבית
+            נסה שוב
           </button>
         </div>
       </div>
