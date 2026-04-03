@@ -1,4 +1,5 @@
 'use client'
+import { useMemo } from 'react'
 import Link from 'next/link'
 import { useUserStore } from '@/lib/store/userStore'
 import { usePlanStore } from '@/lib/store/planStore'
@@ -8,10 +9,27 @@ import { Dumbbell, Play, BookOpen, Waves, Plus, TrendingUp } from 'lucide-react'
 
 const HEB_DAYS = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת']
 
+const MOTIVATIONAL_QUOTES = [
+  'המנוחה היא חלק מהאימון. הגוף שלך בונה כוח עכשיו.',
+  'גדולים לא נולדים — הם נבנים, שריר אחר שריר.',
+  'הקושי של היום הוא הכוח של מחר.',
+  'כל אימון שעשית כבר שינה אותך לטוב.',
+  'הגוף שואל "למה?" — הנפש עונה "כי אני יכול."',
+  'ניצחון אמיתי הוא להתחיל שוב ושוב.',
+  'אתה לא מתחרה באף אחד — רק בגרסה של אתמול.',
+  'מנוחה חכמה היא חלק מהמשחק.',
+  'כל צעד קטן לקראת המטרה — הוא כבר הצלחה.',
+  'הגוף מרפא, הנפש מתחזקת. מחר נחזור.',
+]
+
 export default function DashboardPage() {
   const user = useUserStore(s => s.user)
   const activePlan = usePlanStore(s => s.activePlan)
   const history = useWorkoutStore(s => s.history)
+  const motivationalQuote = useMemo(
+    () => MOTIVATIONAL_QUOTES[Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length)],
+    []
+  )
 
   const todayDow = new Date().getDay()
   const todayName = HEB_DAYS[todayDow]
@@ -61,10 +79,9 @@ export default function DashboardPage() {
               </Link>
             </div>
           ) : activePlan ? (
-            <div className="bg-gray-800 border border-gray-700 rounded-2xl p-5 text-center">
-              <div className="text-2xl mb-2">😴</div>
-              <div className="font-semibold text-gray-200">יום מנוחה</div>
-              <div className="text-sm text-gray-400 mt-1">מגיע לך!</div>
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-5">
+              <div className="text-xs font-medium text-gray-500 mb-3 uppercase tracking-wider">מחשבה להיום</div>
+              <p className="text-gray-200 text-base font-medium leading-relaxed text-right">{motivationalQuote}</p>
             </div>
           ) : (
             <div className="bg-orange-950/30 border-2 border-dashed border-orange-800 rounded-2xl p-6 text-center">
